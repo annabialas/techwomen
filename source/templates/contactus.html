@@ -1,0 +1,25 @@
+{% extends '_base.html' %}
+{% block main %}
+<div class="b-top-section m-dark-blue">
+    <h1>CONTACT US</h1>
+</div>
+<section id="intro-p" class="b-page-section">
+    <div class="row e-content">
+        <div class="large-8 large-offset-2 column">
+          <p>The Open Data Research Symposium is organized by the <a href="https://www.thegovlab.org" class="contactus-link" target="_blank"><strong>GovLab</strong></a> at the <a href="https://engineering.nyu.edu/tandon" class="contactus-link" target="_blank"><strong>NYU Tandon School of Engineering</strong></a>,
+          <a href="https://www.webfoundation.org" class="contactus-link" target="_blank"><strong>the World Wide Web Foundation</strong></a>
+          and <a href="https://www.opendataresearch.org" class="contactus-link" target="_blank"><strong>Open Data for Development</strong></a>. For further information on the Symposium, please email <a href="mailto:stefaan@thegovlab.org?Subject=ODRS%202016" class="contactus-email"><strong>Stefaan Verhulst</strong></a> or use the contact form below.</p>
+
+          <form action="https://formspree.io/andrew@thegovlab.org" method="POST" class="b-form" id="contact-form">
+            <input type="text" name="name" placeholder="FIRST AND LAST NAME" />
+            <input type="email" name="_replyto" placeholder="EMAIL" />
+            <textarea id="msg" name="comment" placeholder="WRITE A MESSAGE"></textarea>
+            <input type="hidden" name="_next" value="//odresearch.org/confirmation-contactus.html" />
+            <a href="#" id="send-btn" class="b-button">Send<i class="material-icons">send</i></a>
+</div>
+          </form>
+        </div>
+        </div>
+</section>
+
+{% endblock %}

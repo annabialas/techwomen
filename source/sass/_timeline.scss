@@ -1,0 +1,121 @@
+$timeline-bg: $white;
+$timeline-accent: $yellow;
+
+$timeline-shade-0: $gray-05;
+$timeline-shade-1: $gray-10;
+$timeline-shade-2: $gray-20;
+$timeline-shade-3: $gray-30;
+$timeline-shade-4: $gray-40;
+$timeline-shade-5: $gray-50;
+
+$diagonal-size: 20px;
+$sm-desktop: 601px;
+$sm-mobile-only: max-width 600px;
+
+.b-timeline, .b-timeline-list {
+    time {
+        font-weight: 600;
+    }
+}
+
+.b-timeline-list {
+    @include breakpoint($sm-desktop) { display: none; }
+    @include breakpoint($sm-mobile-only) { display: block; }
+    margin-bottom: 40px;
+    .e-event {
+        padding: 20px;
+        &:nth-child(odd) {
+            background-color: $timeline-shade-0;
+        }
+        &:nth-child(even) {
+            background-color: $timeline-shade-1;
+        }
+        &.m-current {
+            background-color: $timeline-accent
+        }
+    }
+}
+
+.b-timeline {
+    @include breakpoint($sm-desktop) { display: block; }
+    @include breakpoint($sm-mobile-only) { display: none; }
+    padding-left: 5px;
+    margin-bottom: 40px;
+    .e-event {
+        display: relative;
+        margin-left: -5px;
+        padding-left: 5px;
+        padding-right: 5px;
+        display: inline-block;
+        width: 16.66666666666%;
+        vertical-align: top;
+        border-left: solid 2px $timeline-shade-4;
+
+        &.m-current {
+            border-left: solid 2px $timeline-accent;
+        }
+
+        .e-description {
+            display: block;
+        }
+        time {
+            display: block;
+        }
+    }
+    .e-timeline-graphic {
+        overflow: hidden;
+        margin-left: -5px;
+        padding-left: 5px;
+        .e-timebox {
+            position: relative;
+            height: 40px;
+            padding: 0;
+            display: inline-block;
+            width: 16.66666666666%;
+            margin-left: -5px;
+            &::before, &::after {
+                content: " ";
+            }
+            &::before {
+                position: absolute;
+                width: 0;
+                height: 0;
+                left: 2;
+                top: 12;
+                border-right: $diagonal-size + 2 solid transparent;
+                border-bottom: $diagonal-size + 2 solid transparent;
+                border-top: $diagonal-size + 2 solid $timeline-bg;
+                border-left: $diagonal-size + 2 solid $timeline-bg;
+            }
+            &::after {
+                position: absolute;
+                width: 0;
+                height: 0;
+                left: 0;
+                top: 10;
+                border-right: $diagonal-size solid transparent;
+                border-bottom: $diagonal-size solid transparent;
+            }
+            &:nth-child(1) { background-color: $timeline-shade-0; }
+            &:nth-child(2) { background-color: $timeline-shade-1; }
+            &:nth-child(3) { background-color: $timeline-shade-2; }
+            &:nth-child(4) { background-color: $timeline-shade-3; }
+            &:nth-child(5) { background-color: $timeline-shade-4; }
+            &:nth-child(6) { background-color: $timeline-shade-5; }
+            &:nth-child(1)::after { border-left: $diagonal-size solid $timeline-bg; border-top: $diagonal-size solid $timeline-bg; }
+            &:nth-child(2)::after { border-left: $diagonal-size solid $timeline-shade-0; border-top: $diagonal-size solid $timeline-shade-0; }
+            &:nth-child(3)::after { border-left: $diagonal-size solid $timeline-shade-1; border-top: $diagonal-size solid $timeline-shade-1; }
+            &:nth-child(4)::after { border-left: $diagonal-size solid $timeline-shade-2; border-top: $diagonal-size solid $timeline-shade-2; }
+            &:nth-child(5)::after { border-left: $diagonal-size solid $timeline-shade-3; border-top: $diagonal-size solid $timeline-shade-3; }
+            &:nth-child(6)::after { border-left: $diagonal-size solid $timeline-shade-4; border-top: $diagonal-size solid $timeline-shade-4; }
+
+            &.m-current {
+                background-color: $timeline-accent;
+                & + .e-timebox::after {
+                    border-left: $diagonal-size solid $timeline-accent;
+                    border-top: $diagonal-size solid $timeline-accent;
+                }
+            }
+        }
+    }
+}

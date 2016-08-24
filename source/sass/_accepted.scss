@@ -1,0 +1,26 @@
+table {
+	
+	tbody {
+
+		border: 0px #FFFFFF;
+
+		.authors {
+		
+			a {
+				color: $odrs-green;
+				transition: all .4s ease;
+			}
+
+			a:hover {
+				color: darken($odrs-green, 16);
+				text-decoration:none;
+			}
+		}
+
+		.title {
+				font-style: italic;
+		}
+	}
+	
+}
+

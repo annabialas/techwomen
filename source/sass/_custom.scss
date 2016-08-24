@@ -1,0 +1,358 @@
+// colors
+
+$dark-blue: hsla(207, 33, 21, 1);
+$odrs-green: hsla(187, 43, 49, 1);
+$yellow: hsla(50, 71, 62, 1);
+
+// Color modifiers
+
+.m-dark-blue { background-color: $dark-blue; }
+.m-yellow { background-color: $yellow; }
+.m-green { background-color: $odrs-green; }
+
+.b-divider.m-green { background-color: $odrs-green; }
+
+.b-page-section.m-green > * { color: white; }
+
+.b-divider.m-yellow {
+  h1 { color: darken($yellow, 32); }
+  h2 { color: darken($yellow, 32); }
+  h3 { color: darken($yellow, 32); }
+}
+
+// Custom Style for _base
+main{
+  min-height: 100vh;
+}
+
+/* Keyword value only */
+
+.b-top-nav {
+  .e-social-media {
+    img { max-height: 16px; }
+
+    a { opacity: .6; }
+    a:hover { opacity: 1; }
+  }
+
+  .e-logo {
+    img { height: 36px; }
+  }
+  z-index: 10;
+}
+
+.b-footer {
+  background-color: darken($dark-blue, 3);
+
+  h2 {
+    font-size: 20px;
+    text-align-last: center;
+    color: rgba(white, .2);
+    font-weight: 600;
+    margin: 0 0 30px 0;
+  }
+
+  .column {
+    text-align: center;
+  }
+
+  .e-partner-logo {
+    max-width: 200px;
+    padding: 20px;
+    opacity: .8;
+  }
+
+  .m-od4d { margin-top: -10px; }
+}
+
+.b-copyright { font-weight: 300; }
+
+
+// index custom
+//fi
+.event-logo {
+  text-align: center;
+  img {max-width: 80%;
+    width: 600px;}
+  }
+
+// Questions
+
+.google-form {
+  .freebirdFormviewerViewItemsItemItemTitle {
+    display: none;
+  }
+
+
+}
+
+.b-form {
+  &.m-negative {
+    h4 {
+      font-style: italic;
+      font-weight: 100;
+      text-align: center;
+      text-transform: none;
+      color: white;
+    }
+    h3 {
+      color: white;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .b-button {
+      color: white;
+    }
+  }
+
+  textarea { min-height: 180px; }
+}
+
+.b-divider {
+  h3,
+  .e-button-container { text-align: center; }
+}
+
+.b-page-section > h2 {
+  text-align: center;
+}
+
+.b-committee {
+  ul { padding: 0; }
+  li {
+    list-style-type: none;
+    margin-bottom: 15px;
+    color: rgba($black, .6);
+
+    strong {
+      color: rgba($black, .9);
+      display: block;
+    }
+  }
+}
+
+#overlay { background-color: transparent; }
+
+.row {
+  &.m-extra-margin {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+}
+
+
+#home-abstract-button-container, #abstract-button-container, #home-question-button-container{
+  background-color: white;
+  color: black;
+}
+#home-abstract-button:hover, #home-question-button:hover, .index-odrs-twitter-link:hover{
+  color: darken($yellow, 32);
+}
+.odrs-announcement {
+  text-align: center;
+}
+.menu-text{
+  padding: 4px 30px;
+  font-weight: 600;
+}
+#twitter-logo-text{
+  padding: 18.5px;
+}
+.contactus-link, .contactus-email, .index-odrs-twitter-link, .question-odrs-twitter-link, .odrs-2015-link, .iodc-link{
+  text-decoration: none !important;
+}
+.contactus-link:hover, .contactus-email:hover, .question-odrs-twitter-link:hover, .odrs-2015-link:hover, .iodc-link:hover{
+  color: darken($yellow, 32);
+}
+.confirmation-section-header, .confirmation-section-body{
+  text-align: center;
+}
+.material-icons, .menu-text{
+  cursor: pointer;
+}
+.b-button-background{
+  background-color: $dark-blue;
+  border: none;
+}
+.fa-twitter {
+  color: $odrs-green;
+}
+
+.question-text-area{
+  color: white;
+}
+
+.m-center {
+  text-align: center;
+}
+
+ul{
+  &.m-indent {
+    @include breakpoint($desktop) {
+      padding-left: 50px;
+      padding-right: 50px;
+    }
+    @include breakpoint($mobile-only) {
+      padding-left: inherit;
+      padding-right: inherit;
+    }
+  }
+  &.m-alt-shade li {
+    color: $gray-70;
+  }
+  &.m-wide-lines {
+    line-height: 2;
+    li {
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+  }
+  &.m-alt-bullets {
+    display: table;
+    list-style: none;
+    li {
+      position: relative;
+      &::before {
+        display: inline-block;
+        position: absolute;
+        left: -20px;
+        top: 6px;
+        font-size: 10px;
+        padding-right: 10px;
+        font-family: 'Material Icons';
+        font-weight: normal;
+        font-style: normal;
+        content: "radio_button_unchecked";
+      }
+    }
+  }
+}
+
+.m-extra-header-space {
+  h1, h2, {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  h3, h4 {
+    padding-top: 33px;
+    padding-bottom: 33px;
+  }
+  h5 {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+}
+
+.m-alt-header-shade {
+  h1, h2, h3, h4 {
+    color: $gray-70;
+  }
+}
+
+p, h1, h2, h3, h4, h5, li {
+  time {
+    font-weight: 700;
+  }
+  a:not(.m-base-color) {
+    text-decoration: none;
+    font-weight: 700;
+    color: $odrs-green;
+  }
+  a.b-button {
+    font-weight: initial;
+    color: initial;
+  }
+}
+
+.b-divider.m-green a {
+  color: $white;
+}
+
+
+
+#ss-submit {
+  i {
+    font-size: 16px;
+  }
+}
+
+table.programme {
+  & > tbody > tr:nth-child(even) {
+    background-color: transparent;
+  }
+  .sub-table {
+    padding: 0;
+    & > table tr:first-child td {
+      font-weight: 700;
+    }
+  }
+
+  @include breakpoint($desktop) { display: table; }
+  @include breakpoint($mobile-only) { display: none; }
+}
+
+.programme.m-mobile {
+  div {
+    padding: 10px;
+  }
+  .subsection {
+    section:nth-child(even) {
+      background-color: lighten($dark-blue, 70%);
+    }
+  }
+  .time {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+  .header {
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+  }
+  .subheader {
+    font-weight: 700;
+  }
+  @include breakpoint($desktop) { display: none; }
+  @include breakpoint($mobile-only) { display: block; }
+}
+
+a.inline {
+  font-weight: 700;
+  color: #47a6b3;
+}
+
+.b-button {
+  &.m-ex-space {
+    margin: 10px;
+  }
+  &.m-fold-button {
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    max-width: 200px;
+    bottom: -25px;
+    background-color: $odrs-green;
+    &:hover {
+      background-color: darken($odrs-green, 10%);
+    }
+  }
+}
+
+.rel {
+  position: relative;
+}
+
+.b-divider.m-ex-space-v {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.b-main-menu:not(.m-active) {
+  box-shadow: none;
+}
+
+.b-main-menu {
+  overflow-y: auto;
+}
