@@ -1,12 +1,4 @@
-{% macro modal(name) %}
-<a class="js-open-modal" href="#" data-open="#modal-{{name}}">{{name}}</a>
-<div class="b-modal">
-    <div class="e-content">
-    <p>{{name}}</p>
-    <p><a class="b-button js-close-modal" href="#">OK</a></p>
-    </div>
-</div>
-{% endmacro %}
+
 
 {% extends '_base.html' %}
 {% block header_logo %}{% endblock %}
@@ -16,6 +8,10 @@
 </div>
 
 <section class="b-page-section">
+    <form class="b-search m-main-search m-negative" action="search.html">
+        <input id="index-search" class="" type="text" name="s" placeholder="Search by keyword">
+        <input class="e-search-trigger material-icons" type="submit" value="search">
+    </form>
 	<table>
 		<colgroup>
 	        <col style="width:25%"/>
@@ -26,27 +22,35 @@
         	<tr>
             	<th scope="col">Name</th>
             	<th scope="col">Title</th>
-            	<th scope="col">Organization</th>
+            	<th scope="col">Affiliation</th>
         	</tr>
         </thead>
         <tbody>
         {% for i in experts %}
         	<tr>
         		<td>
-                    {{modal(i.name)}}
+                    <a class="expert-modal" href="#">{{i.name}}</a>
+                    <div class="b-modal">
+                        <div class="e-content">
+                            <h4>{{i.name}}</h4>
+                            <h5>{{i.title}}</h5>
+                            <h5> {{i.affiliation}}</h5>
+                            <p id="tags">
+                                {% for tag in i.tags %}
+                                <span class="label label--{% if tag == 'policy' %}policy{% elif tag == 'data' %}data{% else %}global{% endif %}">{{tag}}</span>
+                                {% endfor %}
+                            </p>
+                            <h5><a href="{{i.job.primary.contact}}">Link to Bio<i class="material-icons">launch</i></h5>
+                            <br>
+                            <a class="b-button expert-close-modal" href="#">Close</a>
+                        </div>
+                    </div>
         		</td>
         		<td>
-        			{{i.job.primary.title}}
-        			{% if i.job.secondary %}
-        			 & {{i.job.secondary.title}}
-        			{% endif %}
-
+        			{{i.title}}
         		</td>
         		<td>
-        			{{i.job.primary.organization}}
-        			{% if i.job.secondary %}
-        			 & {{i.job.secondary.organization}}
-        			{% endif %}
+        			{{i.affiliation}}
         		</td>
         	</tr> 
         {% endfor %}  			

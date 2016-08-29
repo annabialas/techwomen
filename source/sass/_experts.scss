@@ -1,29 +1,64 @@
-.b-page-section {padding:0;}
+.b-page-section { padding: 0; }
 
 table {
-
 	margin:0;
 	border: 0px #FFFFFF;
 
 	thead {
-
 		border: none;
 
-		tr { 
-
-			th { text-align: center; }
-		}
+		tr { th { text-align: center; } }
 	}
 
 	tbody {
 
 		border: 0px #FFFFFF;
 
-		tr { 
-
-			td { text-align: center; vertical-align: middle; }
-		}
+		tr { td { text-align: center; vertical-align: middle; } }
 	}
 	
 }
+
+.b-modal .e-content {
+	text-align: left;
+
+	h4 { font-size: 25px; margin-bottom: 16px; }
+	h5 { }
+
+	.expert-close-modal { font-size: 16px; }
+
+    #tags {
+    	margin: 1em 0;
+
+    	.label { 
+	    	margin-right: 5px; 
+	    	padding: 5px 10px ; 
+	    	color: $white; 
+	    	font-size: 90%;
+	    	border-radius: .25em;
+	    	text-transform: capitalize;
+
+	    	&--policy{
+	    		background-color: $blue;
+	    	}
+	    	&--data{
+	    		background-color: $purple;
+	    	}
+	    	&--global{
+	    		background-color: $orange;
+	    	}
+    	}
+    }
+
+    i { 
+		margin-left: 5px;
+       	vertical-align: top;
+        position: relative;
+    }
+
+}
+
+
+
+
 

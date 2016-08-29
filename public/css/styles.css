@@ -7619,3 +7619,30 @@ table {
     table tbody tr td {
       text-align: center;
       vertical-align: middle; }
+
+.b-modal .e-content {
+  text-align: left; }
+  .b-modal .e-content h4 {
+    font-size: 25px;
+    margin-bottom: 16px; }
+  .b-modal .e-content .expert-close-modal {
+    font-size: 16px; }
+  .b-modal .e-content #tags {
+    margin: 1em 0; }
+    .b-modal .e-content #tags .label {
+      margin-right: 5px;
+      padding: 5px 10px;
+      color: white;
+      font-size: 90%;
+      border-radius: .25em;
+      text-transform: capitalize; }
+      .b-modal .e-content #tags .label--policy {
+        background-color: #008ab3; }
+      .b-modal .e-content #tags .label--data {
+        background-color: #523080; }
+      .b-modal .e-content #tags .label--global {
+        background-color: #ee5b43; }
+  .b-modal .e-content i {
+    margin-left: 5px;
+    vertical-align: top;
+    position: relative; }

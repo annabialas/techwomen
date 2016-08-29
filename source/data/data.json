@@ -2,70 +2,67 @@
 
     {
       "name": "Amie Stepanovich",
-      "job": {
-        "primary": {
-          "title": "U.S. Policy Manager",
-          "organization": "Access Now"
-        }
-      }
+      "firstname": "Amie",
+      "lastname": "Stepanovich",
+      "title": "U.S. Policy Manager",
+      "affiliation": "Access Now",
+      "contact": "https://www.accessnow.org/author/amie-stepanovich/",
+      "tags": ["policy", "data", "global"]
     },
     {
       "name": "Eva Galperin",
-      "job": {
-        "primary": {
-          "title": "Global Policy Analyst",
-          "organization": "Electronic Frontier Foundation"
-        }
-      } 
+      "firstname": "Eva",
+      "lastname": "Galperin",
+      "title": "Global Policy Analyst",
+      "affiliation": "Electronic Frontier Foundation",
+      "contact": "https://www.eff.org/about/staff/eva-galperin",
+      "tags": ["policy", "data", "global"]
     },
     {
       "name": "Jennifer Granick",
-      "job": {
-        "primary": {
-          "title": "Director of Civil Liberties",
-          "organization": "The Center for Internet and Society at Stanford Law School"
-        }
-      }  
+      "firstname": "Jennifer",
+      "lastname": "Granick",
+      "title": "Director of Civil Liberties",
+      "affiliation": "The Center for Internet and Society at Stanford Law School",
+      "contact": "http://cyberlaw.stanford.edu/about/people/jennifer-granick",
+      "tags": ["policy", "data", "global"]
+
     },
     {
       "name": "Riana Pfefferkorn",
-      "job": {
-        "primary": {
-          "title": "Cryptography Fellow",
-          "organization": "The Center for Internet and Society at Stanford Law School"
-        }
-      } 
+      "firstname": "Riana",
+      "lastname": "Pfefferkorn",
+      "title": "Cryptography Fellow",
+      "affiliation": "The Center for Internet and Society at Stanford Law School",
+      "contact": "http://cyberlaw.stanford.edu/about/people/riana-pfefferkorn",
+      "tags": ["policy", "data", "global"]
     },
     {
       "name": "Susan Hennessey",
-      "job": {
-        "primary": {
-       	  "title": "Fellow in National Security in Governance Studies",
-          "organization": "The Brookings Institution"
-        },
-        "secondary": {
-          "title": "Managing Editor",
-          "organization": "Lawfare"
-        }
-      }    
+      "firstname": "Susan",
+      "lastname": "Hennessey",
+      "title": "Fellow in National Security in Governance Studies",
+      "affiliation": "The Brookings Institution",
+      "contact": "https://www.brookings.edu/experts/susan-hennessey/",
+      "tags": ["policy", "data", "global"]
     },
     {
       "name": "Katie Moussouris",
-      "job": {
-        "primary": {
-          "title": "Cybersecurity Fellow",
-          "organization": "New America Foundation"
-        }
-      } 
+      "firstname": "Katie",
+      "lastname": "Moussoris",
+      "title": "Cybersecurity Fellow",
+      "affiliation": "New America Foundation",
+      "contact": "https://www.newamerica.org/our-people/katie-moussouris/",
+      "tags": ["policy", "data", "global"]
     },
     {
       "name": "Wafa Ben Hassine",
-      "job": {
-        "primary": {
-          "title": "Information Controls Fellow",
-          "organization": "Open Technology Fund"
-        }
-      }
+      "firstname": "Wafa",
+      "lastname": "Ben Hassine",
+      "title": "Information Controls Fellow",
+      "affiliation": "Open Technology Fund",
+      "contact": "https://www.opentech.fund/fellow/wafa-ben-hassine",
+      "tags": ["policy", "data", "global"]
     }
   ]
 }
