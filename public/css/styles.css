@@ -7210,6 +7210,9 @@ code.m-negative {
 .m-green {
   background-color: #47a6b3; }
 
+.m-purple {
+  background-color: #523080; }
+
 .b-divider.m-green {
   background-color: #47a6b3; }
 
@@ -7241,7 +7244,7 @@ main {
     height: 36px; }
 
 .b-footer {
-  background-color: #1f2f3d; }
+  background-color: #2b2b2b; }
   .b-footer h2 {
     font-size: 20px;
     text-align-last: center;
@@ -7464,11 +7467,11 @@ a.inline {
   position: absolute;
   left: 0;
   right: 0;
-  max-width: 200px;
+  max-width: 300px;
   bottom: -25px;
-  background-color: #47a6b3; }
+  background-color: #ee5b43; }
   .b-button.m-fold-button:hover, .b-form input.m-fold-button[type="submit"]:hover {
-    background-color: #39848e; }
+    background-color: #e93315; }
 
 .rel {
   position: relative; }
@@ -7600,3 +7603,19 @@ table tbody {
     text-decoration: none; }
   table tbody .title {
     font-style: italic; }
+
+.b-page-section {
+  padding: 0; }
+
+table {
+  margin: 0;
+  border: 0px #FFFFFF; }
+  table thead {
+    border: none; }
+    table thead tr th {
+      text-align: center; }
+  table tbody {
+    border: 0px #FFFFFF; }
+    table tbody tr td {
+      text-align: center;
+      vertical-align: middle; }

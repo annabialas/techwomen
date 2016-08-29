@@ -1,0 +1,57 @@
+{% macro modal(name) %}
+<a class="js-open-modal" href="#" data-open="#modal-{{name}}">{{name}}</a>
+<div class="b-modal">
+    <div class="e-content">
+    <p>{{name}}</p>
+    <p><a class="b-button js-close-modal" href="#">OK</a></p>
+    </div>
+</div>
+{% endmacro %}
+
+{% extends '_base.html' %}
+{% block header_logo %}{% endblock %}
+{% block main %}
+<div class="b-top-section m-purple">
+	<h1>Discover Experts</h1>
+</div>
+
+<section class="b-page-section">
+	<table>
+		<colgroup>
+	        <col style="width:25%"/>
+	        <col style="width:25%"/>
+	       	<col style="width:50%"/>
+    	</colgroup>
+    	<thead>
+        	<tr>
+            	<th scope="col">Name</th>
+            	<th scope="col">Title</th>
+            	<th scope="col">Organization</th>
+        	</tr>
+        </thead>
+        <tbody>
+        {% for i in experts %}
+        	<tr>
+        		<td>
+                    {{modal(i.name)}}
+        		</td>
+        		<td>
+        			{{i.job.primary.title}}
+        			{% if i.job.secondary %}
+        			 & {{i.job.secondary.title}}
+        			{% endif %}
+
+        		</td>
+        		<td>
+        			{{i.job.primary.organization}}
+        			{% if i.job.secondary %}
+        			 & {{i.job.secondary.organization}}
+        			{% endif %}
+        		</td>
+        	</tr> 
+        {% endfor %}  			
+        </tbody>
+    </table>
+</section>
+
+{% endblock %}

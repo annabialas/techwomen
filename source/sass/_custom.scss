@@ -9,6 +9,7 @@ $yellow: hsla(50, 71, 62, 1);
 .m-dark-blue { background-color: $dark-blue; }
 .m-yellow { background-color: $yellow; }
 .m-green { background-color: $odrs-green; }
+.m-purple { background-color: $purple; }
 
 .b-divider.m-green { background-color: $odrs-green; }
 
@@ -42,7 +43,7 @@ main{
 }
 
 .b-footer {
-  background-color: darken($dark-blue, 3);
+  background-color: darken($black, 3);
 
   h2 {
     font-size: 20px;
@@ -331,11 +332,11 @@ a.inline {
     position: absolute;
     left: 0;
     right: 0;
-    max-width: 200px;
+    max-width: 300px;
     bottom: -25px;
-    background-color: $odrs-green;
+    background-color: $orange;
     &:hover {
-      background-color: darken($odrs-green, 10%);
+      background-color: darken($orange, 10%);
     }
   }
 }

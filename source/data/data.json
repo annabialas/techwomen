@@ -1,2 +1,71 @@
-{
+{ "experts": [
+
+    {
+      "name": "Amie Stepanovich",
+      "job": {
+        "primary": {
+          "title": "U.S. Policy Manager",
+          "organization": "Access Now"
+        }
+      }
+    },
+    {
+      "name": "Eva Galperin",
+      "job": {
+        "primary": {
+          "title": "Global Policy Analyst",
+          "organization": "Electronic Frontier Foundation"
+        }
+      } 
+    },
+    {
+      "name": "Jennifer Granick",
+      "job": {
+        "primary": {
+          "title": "Director of Civil Liberties",
+          "organization": "The Center for Internet and Society at Stanford Law School"
+        }
+      }  
+    },
+    {
+      "name": "Riana Pfefferkorn",
+      "job": {
+        "primary": {
+          "title": "Cryptography Fellow",
+          "organization": "The Center for Internet and Society at Stanford Law School"
+        }
+      } 
+    },
+    {
+      "name": "Susan Hennessey",
+      "job": {
+        "primary": {
+       	  "title": "Fellow in National Security in Governance Studies",
+          "organization": "The Brookings Institution"
+        },
+        "secondary": {
+          "title": "Managing Editor",
+          "organization": "Lawfare"
+        }
+      }    
+    },
+    {
+      "name": "Katie Moussouris",
+      "job": {
+        "primary": {
+          "title": "Cybersecurity Fellow",
+          "organization": "New America Foundation"
+        }
+      } 
+    },
+    {
+      "name": "Wafa Ben Hassine",
+      "job": {
+        "primary": {
+          "title": "Information Controls Fellow",
+          "organization": "Open Technology Fund"
+        }
+      }
+    }
+  ]
 }
