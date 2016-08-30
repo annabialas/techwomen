@@ -65,11 +65,15 @@
 	<h1>Discover Experts</h1>
 </div>
 
-<section class="b-page-section">
+<!-- SEARCH - COMMENTED OUT FOR NOW  -->
+<!-- <section class="b-page-section b-main-search-section">
     <form class="b-search m-main-search m-negative" action="search.html">
-        <input id="index-search" class="" type="text" name="s" placeholder="Search by keyword">
-        <input class="e-search-trigger material-icons" type="submit" value="search">
+        <input id="index-search" class="" type="text" placeholder="Search Experts"><input class="e-search-trigger material-icons" type="submit" value="search">
     </form>
+</section> -->
+
+<section class="b-page-section">
+    <div id="experts-sortable">
 	<table>
 		<colgroup>
 	        <col style="width:25%"/>
@@ -78,233 +82,257 @@
     	</colgroup>
     	<thead>
         	<tr>
-            	<th scope="col">Name</th>
-            	<th scope="col">Title</th>
-            	<th scope="col">Affiliation</th>
+            	<th scope="col"><span class="sort" data-sort="name">Name <i class="material-icons">keyboard_arrow_down</i></span></th>
+            	<th scope="col"><span class="sort" data-sort="post">Title <i class="material-icons">keyboard_arrow_down</i></span></th> <!-- 'post' because on class 'title' the fields become italicized -->
+            	<th scope="col"><span class="sort" data-sort="affiliation">Affiliation <i class="material-icons">keyboard_arrow_down</i></span></th>
         	</tr>
         </thead>
-        <tbody>
+        <tbody class="list">
         
         	<tr>
-        		<td>
-                    <a class="expert-modal" href="#">Amie Stepanovich</a>
-                    <div class="b-modal">
-                        <div class="e-content">
-                            <h4>Amie Stepanovich</h4>
-                            <h5>U.S. Policy Manager</h5>
-                            <h5> Access Now</h5>
-                            <p id="tags">
-                                
-                                <span class="label label--policy">policy</span>
-                                
-                                <span class="label label--data">data</span>
-                                
-                                <span class="label label--global">global</span>
-                                
-                            </p>
-                            <h5><a href="">Link to Bio<i class="material-icons">launch</i></h5>
-                            <br>
-                            <a class="b-button expert-close-modal" href="#">Close</a>
-                        </div>
-                    </div>
+        		<td class="name">
+                    <a class="expert-modal" href="#">Wafa Ben Hassine</a>
+                                    
+     <div class="b-modal">
+        <div class="e-content">
+            <h4>Wafa Ben Hassine</h4>
+            <h5>Information Controls Fellow</h5>
+            <h5> Open Technology Fund</h5>
+            <p id="tags">
+                
+                    <span class="label label--policy">policy</span>
+                
+                    <span class="label label--data">data</span>
+                
+                    <span class="label label--global">global</span>
+                
+            </p>
+            <h5><a href="https://www.opentech.fund/fellow/wafa-ben-hassine" target="_black">Link to Bio<i class="material-icons">launch</i></h5>
+            <br>
+            <a class="b-button expert-close-modal" href="#">Close</a>
+        </div>
+    </div>
+ 
         		</td>
-        		<td>
-        			U.S. Policy Manager
+        		<td class="post">
+        			Information Controls Fellow
         		</td>
-        		<td>
-        			Access Now
+        		<td class="affiliation">
+        			Open Technology Fund
         		</td>
         	</tr> 
         
         	<tr>
-        		<td>
+        		<td class="name">
                     <a class="expert-modal" href="#">Eva Galperin</a>
-                    <div class="b-modal">
-                        <div class="e-content">
-                            <h4>Eva Galperin</h4>
-                            <h5>Global Policy Analyst</h5>
-                            <h5> Electronic Frontier Foundation</h5>
-                            <p id="tags">
-                                
-                                <span class="label label--policy">policy</span>
-                                
-                                <span class="label label--data">data</span>
-                                
-                                <span class="label label--global">global</span>
-                                
-                            </p>
-                            <h5><a href="">Link to Bio<i class="material-icons">launch</i></h5>
-                            <br>
-                            <a class="b-button expert-close-modal" href="#">Close</a>
-                        </div>
-                    </div>
+                                    
+     <div class="b-modal">
+        <div class="e-content">
+            <h4>Eva Galperin</h4>
+            <h5>Global Policy Analyst</h5>
+            <h5> Electronic Frontier Foundation</h5>
+            <p id="tags">
+                
+                    <span class="label label--policy">policy</span>
+                
+                    <span class="label label--data">data</span>
+                
+                    <span class="label label--global">global</span>
+                
+            </p>
+            <h5><a href="https://www.eff.org/about/staff/eva-galperin" target="_black">Link to Bio<i class="material-icons">launch</i></h5>
+            <br>
+            <a class="b-button expert-close-modal" href="#">Close</a>
+        </div>
+    </div>
+ 
         		</td>
-        		<td>
+        		<td class="post">
         			Global Policy Analyst
         		</td>
-        		<td>
+        		<td class="affiliation">
         			Electronic Frontier Foundation
         		</td>
         	</tr> 
         
         	<tr>
-        		<td>
+        		<td class="name">
                     <a class="expert-modal" href="#">Jennifer Granick</a>
-                    <div class="b-modal">
-                        <div class="e-content">
-                            <h4>Jennifer Granick</h4>
-                            <h5>Director of Civil Liberties</h5>
-                            <h5> The Center for Internet and Society at Stanford Law School</h5>
-                            <p id="tags">
-                                
-                                <span class="label label--policy">policy</span>
-                                
-                                <span class="label label--data">data</span>
-                                
-                                <span class="label label--global">global</span>
-                                
-                            </p>
-                            <h5><a href="">Link to Bio<i class="material-icons">launch</i></h5>
-                            <br>
-                            <a class="b-button expert-close-modal" href="#">Close</a>
-                        </div>
-                    </div>
+                                    
+     <div class="b-modal">
+        <div class="e-content">
+            <h4>Jennifer Granick</h4>
+            <h5>Director of Civil Liberties</h5>
+            <h5> The Center for Internet and Society at Stanford Law School</h5>
+            <p id="tags">
+                
+                    <span class="label label--policy">policy</span>
+                
+                    <span class="label label--data">data</span>
+                
+                    <span class="label label--global">global</span>
+                
+            </p>
+            <h5><a href="http://cyberlaw.stanford.edu/about/people/jennifer-granick" target="_black">Link to Bio<i class="material-icons">launch</i></h5>
+            <br>
+            <a class="b-button expert-close-modal" href="#">Close</a>
+        </div>
+    </div>
+ 
         		</td>
-        		<td>
+        		<td class="post">
         			Director of Civil Liberties
         		</td>
-        		<td>
+        		<td class="affiliation">
         			The Center for Internet and Society at Stanford Law School
         		</td>
         	</tr> 
         
         	<tr>
-        		<td>
-                    <a class="expert-modal" href="#">Riana Pfefferkorn</a>
-                    <div class="b-modal">
-                        <div class="e-content">
-                            <h4>Riana Pfefferkorn</h4>
-                            <h5>Cryptography Fellow</h5>
-                            <h5> The Center for Internet and Society at Stanford Law School</h5>
-                            <p id="tags">
-                                
-                                <span class="label label--policy">policy</span>
-                                
-                                <span class="label label--data">data</span>
-                                
-                                <span class="label label--global">global</span>
-                                
-                            </p>
-                            <h5><a href="">Link to Bio<i class="material-icons">launch</i></h5>
-                            <br>
-                            <a class="b-button expert-close-modal" href="#">Close</a>
-                        </div>
-                    </div>
-        		</td>
-        		<td>
-        			Cryptography Fellow
-        		</td>
-        		<td>
-        			The Center for Internet and Society at Stanford Law School
-        		</td>
-        	</tr> 
-        
-        	<tr>
-        		<td>
+        		<td class="name">
                     <a class="expert-modal" href="#">Susan Hennessey</a>
-                    <div class="b-modal">
-                        <div class="e-content">
-                            <h4>Susan Hennessey</h4>
-                            <h5>Fellow in National Security in Governance Studies</h5>
-                            <h5> The Brookings Institution</h5>
-                            <p id="tags">
-                                
-                                <span class="label label--policy">policy</span>
-                                
-                                <span class="label label--data">data</span>
-                                
-                                <span class="label label--global">global</span>
-                                
-                            </p>
-                            <h5><a href="">Link to Bio<i class="material-icons">launch</i></h5>
-                            <br>
-                            <a class="b-button expert-close-modal" href="#">Close</a>
-                        </div>
-                    </div>
+                                    
+     <div class="b-modal">
+        <div class="e-content">
+            <h4>Susan Hennessey</h4>
+            <h5>Fellow in National Security in Governance Studies</h5>
+            <h5> The Brookings Institution</h5>
+            <p id="tags">
+                
+                    <span class="label label--policy">policy</span>
+                
+                    <span class="label label--data">data</span>
+                
+                    <span class="label label--global">global</span>
+                
+            </p>
+            <h5><a href="https://www.brookings.edu/experts/susan-hennessey/" target="_black">Link to Bio<i class="material-icons">launch</i></h5>
+            <br>
+            <a class="b-button expert-close-modal" href="#">Close</a>
+        </div>
+    </div>
+ 
         		</td>
-        		<td>
+        		<td class="post">
         			Fellow in National Security in Governance Studies
         		</td>
-        		<td>
+        		<td class="affiliation">
         			The Brookings Institution
         		</td>
         	</tr> 
         
         	<tr>
-        		<td>
+        		<td class="name">
                     <a class="expert-modal" href="#">Katie Moussouris</a>
-                    <div class="b-modal">
-                        <div class="e-content">
-                            <h4>Katie Moussouris</h4>
-                            <h5>Cybersecurity Fellow</h5>
-                            <h5> New America Foundation</h5>
-                            <p id="tags">
-                                
-                                <span class="label label--policy">policy</span>
-                                
-                                <span class="label label--data">data</span>
-                                
-                                <span class="label label--global">global</span>
-                                
-                            </p>
-                            <h5><a href="">Link to Bio<i class="material-icons">launch</i></h5>
-                            <br>
-                            <a class="b-button expert-close-modal" href="#">Close</a>
-                        </div>
-                    </div>
+                                    
+     <div class="b-modal">
+        <div class="e-content">
+            <h4>Katie Moussouris</h4>
+            <h5>Cybersecurity Fellow</h5>
+            <h5> New America Foundation</h5>
+            <p id="tags">
+                
+                    <span class="label label--policy">policy</span>
+                
+                    <span class="label label--data">data</span>
+                
+                    <span class="label label--global">global</span>
+                
+            </p>
+            <h5><a href="https://www.newamerica.org/our-people/katie-moussouris/" target="_black">Link to Bio<i class="material-icons">launch</i></h5>
+            <br>
+            <a class="b-button expert-close-modal" href="#">Close</a>
+        </div>
+    </div>
+ 
         		</td>
-        		<td>
+        		<td class="post">
         			Cybersecurity Fellow
         		</td>
-        		<td>
+        		<td class="affiliation">
         			New America Foundation
         		</td>
         	</tr> 
         
         	<tr>
-        		<td>
-                    <a class="expert-modal" href="#">Wafa Ben Hassine</a>
-                    <div class="b-modal">
-                        <div class="e-content">
-                            <h4>Wafa Ben Hassine</h4>
-                            <h5>Information Controls Fellow</h5>
-                            <h5> Open Technology Fund</h5>
-                            <p id="tags">
-                                
-                                <span class="label label--policy">policy</span>
-                                
-                                <span class="label label--data">data</span>
-                                
-                                <span class="label label--global">global</span>
-                                
-                            </p>
-                            <h5><a href="">Link to Bio<i class="material-icons">launch</i></h5>
-                            <br>
-                            <a class="b-button expert-close-modal" href="#">Close</a>
-                        </div>
-                    </div>
+        		<td class="name">
+                    <a class="expert-modal" href="#">Riana Pfefferkorn</a>
+                                    
+     <div class="b-modal">
+        <div class="e-content">
+            <h4>Riana Pfefferkorn</h4>
+            <h5>Cryptography Fellow</h5>
+            <h5> The Center for Internet and Society at Stanford Law School</h5>
+            <p id="tags">
+                
+                    <span class="label label--policy">policy</span>
+                
+                    <span class="label label--data">data</span>
+                
+                    <span class="label label--global">global</span>
+                
+            </p>
+            <h5><a href="http://cyberlaw.stanford.edu/about/people/riana-pfefferkorn" target="_black">Link to Bio<i class="material-icons">launch</i></h5>
+            <br>
+            <a class="b-button expert-close-modal" href="#">Close</a>
+        </div>
+    </div>
+ 
         		</td>
-        		<td>
-        			Information Controls Fellow
+        		<td class="post">
+        			Cryptography Fellow
         		</td>
-        		<td>
-        			Open Technology Fund
+        		<td class="affiliation">
+        			The Center for Internet and Society at Stanford Law School
+        		</td>
+        	</tr> 
+        
+        	<tr>
+        		<td class="name">
+                    <a class="expert-modal" href="#">Amie Stepanovich</a>
+                                    
+     <div class="b-modal">
+        <div class="e-content">
+            <h4>Amie Stepanovich</h4>
+            <h5>U.S. Policy Manager</h5>
+            <h5> Access Now</h5>
+            <p id="tags">
+                
+                    <span class="label label--policy">policy</span>
+                
+                    <span class="label label--data">data</span>
+                
+                    <span class="label label--global">global</span>
+                
+            </p>
+            <h5><a href="https://www.accessnow.org/author/amie-stepanovich/" target="_black">Link to Bio<i class="material-icons">launch</i></h5>
+            <br>
+            <a class="b-button expert-close-modal" href="#">Close</a>
+        </div>
+    </div>
+ 
+        		</td>
+        		<td class="post">
+        			U.S. Policy Manager
+        		</td>
+        		<td class="affiliation">
+        			Access Now
         		</td>
         	</tr> 
           			
         </tbody>
     </table>
+    </div>
 </section>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js"></script>
+<script type="text/javascript">
+    var options = {
+        valueNames: [ 'name', 'post', 'affiliation' ]
+    };
+
+    var contactList = new List('experts-sortable', options);
+</script>
 
 
     </main>

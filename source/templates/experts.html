@@ -1,4 +1,20 @@
-
+{% macro modal(name,title,affiliation,contact,tags) %}                
+     <div class="b-modal">
+        <div class="e-content">
+            <h4>{{name}}</h4>
+            <h5>{{title}}</h5>
+            <h5> {{affiliation}}</h5>
+            <p id="tags">
+                {% for tag in tags %}
+                    <span class="label label--{% if tag == 'policy' %}policy{% elif tag == 'data' %}data{% else %}global{% endif %}">{{tag}}</span>
+                {% endfor %}
+            </p>
+            <h5><a href="{{contact}}" target="_black">Link to Bio<i class="material-icons">launch</i></h5>
+            <br>
+            <a class="b-button expert-close-modal" href="#">Close</a>
+        </div>
+    </div>
+ {% endmacro %}
 
 {% extends '_base.html' %}
 {% block header_logo %}{% endblock %}
@@ -7,11 +23,15 @@
 	<h1>Discover Experts</h1>
 </div>
 
-<section class="b-page-section">
+<!-- SEARCH - COMMENTED OUT FOR NOW  -->
+<!-- <section class="b-page-section b-main-search-section">
     <form class="b-search m-main-search m-negative" action="search.html">
-        <input id="index-search" class="" type="text" name="s" placeholder="Search by keyword">
-        <input class="e-search-trigger material-icons" type="submit" value="search">
+        <input id="index-search" class="" type="text" placeholder="Search Experts"><input class="e-search-trigger material-icons" type="submit" value="search">
     </form>
+</section> -->
+
+<section class="b-page-section">
+    <div id="experts-sortable">
 	<table>
 		<colgroup>
 	        <col style="width:25%"/>
@@ -20,42 +40,38 @@
     	</colgroup>
     	<thead>
         	<tr>
-            	<th scope="col">Name</th>
-            	<th scope="col">Title</th>
-            	<th scope="col">Affiliation</th>
+            	<th scope="col"><span class="sort" data-sort="name">Name <i class="material-icons">keyboard_arrow_down</i></span></th>
+            	<th scope="col"><span class="sort" data-sort="post">Title <i class="material-icons">keyboard_arrow_down</i></span></th> <!-- 'post' because on class 'title' the fields become italicized -->
+            	<th scope="col"><span class="sort" data-sort="affiliation">Affiliation <i class="material-icons">keyboard_arrow_down</i></span></th>
         	</tr>
         </thead>
-        <tbody>
-        {% for i in experts %}
+        <tbody class="list">
+        {% for i in experts|sort(attribute='lastname')  %}
         	<tr>
-        		<td>
+        		<td class="name">
                     <a class="expert-modal" href="#">{{i.name}}</a>
-                    <div class="b-modal">
-                        <div class="e-content">
-                            <h4>{{i.name}}</h4>
-                            <h5>{{i.title}}</h5>
-                            <h5> {{i.affiliation}}</h5>
-                            <p id="tags">
-                                {% for tag in i.tags %}
-                                <span class="label label--{% if tag == 'policy' %}policy{% elif tag == 'data' %}data{% else %}global{% endif %}">{{tag}}</span>
-                                {% endfor %}
-                            </p>
-                            <h5><a href="{{i.job.primary.contact}}">Link to Bio<i class="material-icons">launch</i></h5>
-                            <br>
-                            <a class="b-button expert-close-modal" href="#">Close</a>
-                        </div>
-                    </div>
+                    {{modal(i.name,i.title,i.affiliation,i.contact,i.tags)}}
         		</td>
-        		<td>
+        		<td class="post">
         			{{i.title}}
         		</td>
-        		<td>
+        		<td class="affiliation">
         			{{i.affiliation}}
         		</td>
         	</tr> 
         {% endfor %}  			
         </tbody>
     </table>
+    </div>
 </section>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js"></script>
+<script type="text/javascript">
+    var options = {
+        valueNames: [ 'name', 'post', 'affiliation' ]
+    };
+
+    var contactList = new List('experts-sortable', options);
+</script>
 
 {% endblock %}

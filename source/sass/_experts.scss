@@ -4,19 +4,22 @@ table {
 	margin:0;
 	border: 0px #FFFFFF;
 
+	i { 
+		margin-left: 15px;
+       	vertical-align: middle;
+        position: relative;
+    }
+
 	thead {
 		border: none;
-
 		tr { th { text-align: center; } }
 	}
 
 	tbody {
 
 		border: 0px #FFFFFF;
-
 		tr { td { text-align: center; vertical-align: middle; } }
-	}
-	
+	}	
 }
 
 .b-modal .e-content {
