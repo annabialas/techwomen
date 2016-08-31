@@ -1,68 +1,59 @@
-.b-search.m-main-search {
-    input[type="text"] {
-    padding: 28px;
-    font-size: 24px;
-    width: calc(100% - 58px);
-    max-width: 100%;
+//copy-paste from styleguide for now, will be edited during the styling stage
 
-    &:focus {
-      background-color: rgba($white, .3);
-      color:$white;
+.b-search {
+    width: 100%;
+    padding: 0;
+    position: relative;
+
+    input {
+        color: currentColor;
+        vertical-align: bottom;
+        background-color: transparent;
+        @include transition;
+        border: 0;
+        display: inline-block;
+        margin-bottom: 0;
     }
-  }
 
-  input[type="submit"], input[type="button"] {
-    padding: 17px;
-    background-color: rgba($black, .2);
-  }
+    input:focus {
+        outline: none;
+        background-color: $white-30;
 
-  input[type="button"] {
-    padding: 16px 17px;
-  }
+    }
 
-  input[type="text"]:focus ~ input[type="submit"] {
-    background-color: rgba($black, .4);
-  }
+    input[type='text'] {
+        background-color: $gray-10;
+        padding: 8px 0;
+        max-width: 0;
+        width: calc(100% - 45px); // Need to keep both widths in base and .m-active styles for transition to work smoothly
+    }
 
-  ::-webkit-input-placeholder {
-   color: rgba($white, .3);
-   text-align: left;
-  }
+    input[type='text']:focus { max-width: 100%; }
 
-  :-moz-placeholder { /* Firefox 18- */
-     color: rgba($white, .3);
-     text-align: left;
-  }
+    input[type='submit'] {
+        padding: 8px;
+        background-color: transparent;
+        line-height: .95; // Alignment Fix
+    }
 
-  ::-moz-placeholder {  /* Firefox 19+ */
-     color: rgba($white, .3);
-     text-align: left;
-  }
-
-  :-ms-input-placeholder {
-     color: rgba($white, .3);
-     text-align: left;
-  }
-
+    input[type='submit']:hover { opacity: 1; }
 }
 
-.b-main-search-section {
-  //background-color: rgba($white, .2);
-  background-color: rgba($black, .3);
+.b-search.m-fixed,
+.b-search.m-active {
+    z-index: 20;
 
-  .e-tagline {
-    text-align: center;
-    padding: 0 0 40px;
-    color: $white;
-
-    @include breakpoint($mobile-only) {
-      font-size: 16px;
+    input[type='text'] {
+        padding: 8px;
+        max-width: 100%;
+        width: calc(100% - 45px); // Need to keep both widths in base and .m-active styles for transition to work smoothly
     }
-  }
+
+    input[type='submit'] { opacity: 1; }
 }
 
-.b-organizations {
-  background-color: $white;
 
-  .m-digital-engagement-evaluation-team { max-width: 330px !important; }
+.b-search.m-negative {
+    input { color: $white; }
+    input[type='text'] { background-color: $white-10; }
 }

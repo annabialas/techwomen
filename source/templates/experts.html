@@ -6,7 +6,7 @@
             <h5> {{affiliation}}</h5>
             <p id="tags">
                 {% for tag in tags %}
-                    <span class="label label--{% if tag == 'policy' %}policy{% elif tag == 'data' %}data{% else %}global{% endif %}">{{tag}}</span>
+                    <a href=""><span class="label label--{% if tag == 'policy' %}policy{% elif tag == 'data' %}data{% else %}global{% endif %}">{{tag}}</span></a>
                 {% endfor %}
             </p>
             <h5><a href="{{contact}}" target="_black">Link to Bio<i class="material-icons">launch</i></h5>
@@ -23,32 +23,37 @@
 	<h1>Discover Experts</h1>
 </div>
 
-<!-- SEARCH - COMMENTED OUT FOR NOW  -->
-<!-- <section class="b-page-section b-main-search-section">
-    <form class="b-search m-main-search m-negative" action="search.html">
-        <input id="index-search" class="" type="text" placeholder="Search Experts"><input class="e-search-trigger material-icons" type="submit" value="search">
-    </form>
-</section> -->
-
 <section class="b-page-section">
     <div id="experts-sortable">
+    <form class="b-search m-active" action="">
+        <input class="fuzzy-search" type="text">
+        <input class="material-icons" type="submit" value="search">
+    </form>
+    <div class="">
+        <a href="#" class="b-button m-blue">Policy</a>
+        <a href="#" class="b-button m-purple">Data</a>
+        <a href="#" class="b-button m-orange">Global</a>
+    </div>
 	<table>
 		<colgroup>
 	        <col style="width:25%"/>
-	        <col style="width:25%"/>
-	       	<col style="width:50%"/>
+	        <col style="width:35%"/>
+	       	<col style="width:40%"/>
+            <col style="width:0%"/>
+
     	</colgroup>
     	<thead>
         	<tr>
             	<th scope="col"><span class="sort" data-sort="name">Name <i class="material-icons">keyboard_arrow_down</i></span></th>
-            	<th scope="col"><span class="sort" data-sort="post">Title <i class="material-icons">keyboard_arrow_down</i></span></th> <!-- 'post' because on class 'title' the fields become italicized -->
+            	<th scope="col"><span class="sort" data-sort="post">Title <i class="material-icons">keyboard_arrow_down</i></span></th>
             	<th scope="col"><span class="sort" data-sort="affiliation">Affiliation <i class="material-icons">keyboard_arrow_down</i></span></th>
+                <th scope="col" class="sort nodisplay" data-sort="firstname"></th>
         	</tr>
         </thead>
         <tbody class="list">
         {% for i in experts|sort(attribute='lastname')  %}
         	<tr>
-        		<td class="name">
+        		<td data-target="{{i.lastname}}" class="name">
                     <a class="expert-modal" href="#">{{i.name}}</a>
                     {{modal(i.name,i.title,i.affiliation,i.contact,i.tags)}}
         		</td>
@@ -58,20 +63,29 @@
         		<td class="affiliation">
         			{{i.affiliation}}
         		</td>
+                <td class="firstname nodisplay">
+                    {{i.firstname}}
+                </td>
         	</tr> 
-        {% endfor %}  			
+        {% endfor %}  		
+
+	
         </tbody>
     </table>
     </div>
 </section>
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/1.1.1/list.min.js"></script>
+<script src="http://listjs.com/no-cdn/list.js"></script>
+<script src="http://listjs.com/no-cdn/list.fuzzysearch.js"></script>
 <script type="text/javascript">
+
     var options = {
-        valueNames: [ 'name', 'post', 'affiliation' ]
+        valueNames: [ { attr: 'data-target', name: 'name'}, 'post', 'affiliation', 'firstname'],
+        plugins: [ ListFuzzySearch() ] 
     };
 
     var contactList = new List('experts-sortable', options);
+
 </script>
 
 {% endblock %}

@@ -1,4 +1,5 @@
 .b-page-section { padding: 0; }
+.nodisplay { display: none; }
 
 table {
 	margin:0;
@@ -21,6 +22,8 @@ table {
 		tr { td { text-align: center; vertical-align: middle; } }
 	}	
 }
+
+.b-modal { z-index: 30; }
 
 .b-modal .e-content {
 	text-align: left;
