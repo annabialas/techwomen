@@ -25,6 +25,9 @@ table {
 
 .b-modal { z-index: 30; }
 
+.m-yellow { color: $white; }
+.m-yellow:hover {color: $white; background-color: darken($yellow, 8)}
+
 .b-modal .e-content {
 	text-align: left;
 
@@ -52,6 +55,15 @@ table {
 	    	}
 	    	&--global{
 	    		background-color: $orange;
+	    	}
+	    	&--national{
+	    		background-color: $teal;
+	    	}
+	    	&--security{
+	    		background-color: $black;
+	    	}
+	    	&--governance{
+	    		background-color: $yellow;
 	    	}
     	}
     }

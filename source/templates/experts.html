@@ -6,7 +6,7 @@
             <h5> {{affiliation}}</h5>
             <p id="tags">
                 {% for tag in tags %}
-                    <a href=""><span class="label label--{% if tag == 'policy' %}policy{% elif tag == 'data' %}data{% else %}global{% endif %}">{{tag}}</span></a>
+                    <span class="label label--{% if tag == 'policy' %}policy{% elif tag == 'data' %}data{% elif tag == 'national' %}national{% elif tag == 'governance' %}governance{% elif tag == 'security' %}security{% else %}global{% endif %}">{{tag}}</span>
                 {% endfor %}
             </p>
             <h5><a href="{{contact}}" target="_black">Link to Bio<i class="material-icons">launch</i></h5>
@@ -29,16 +29,19 @@
         <input class="fuzzy-search" type="text">
         <input class="material-icons" type="submit" value="search">
     </form>
-    <div class="">
-        <a href="#" class="b-button m-blue">Policy</a>
-        <a href="#" class="b-button m-purple">Data</a>
-        <a href="#" class="b-button m-orange">Global</a>
-    </div>
+        <div class="b-button m-gray" id="display-all">Display All</div>
+        <div class="b-button m-blue filter" id="policy">Policy</div>
+        <div class="b-button m-purple filter" id="data">Data</div>
+        <div class="b-button m-orange filter" id="global">Global</div>
+        <div class="b-button m-teal filter" id="national">National</div>
+        <div class="b-button m-black filter" id="security">Security</div>
+        <div class="b-button m-yellow filter" id="governance">Governance</div>
 	<table>
 		<colgroup>
 	        <col style="width:25%"/>
 	        <col style="width:35%"/>
 	       	<col style="width:40%"/>
+            <col style="width:0%"/>
             <col style="width:0%"/>
 
     	</colgroup>
@@ -48,24 +51,24 @@
             	<th scope="col"><span class="sort" data-sort="post">Title <i class="material-icons">keyboard_arrow_down</i></span></th>
             	<th scope="col"><span class="sort" data-sort="affiliation">Affiliation <i class="material-icons">keyboard_arrow_down</i></span></th>
                 <th scope="col" class="sort nodisplay" data-sort="firstname"></th>
+                <th scope="col" class="sort nodisplay" data-sort="tags"></th>
         	</tr>
         </thead>
         <tbody class="list">
         {% for i in experts|sort(attribute='lastname')  %}
         	<tr>
-        		<td data-target="{{i.lastname}}" class="name">
+        		<td data-name="{{i.lastname}}" class="name">
                     <a class="expert-modal" href="#">{{i.name}}</a>
                     {{modal(i.name,i.title,i.affiliation,i.contact,i.tags)}}
         		</td>
-        		<td class="post">
+        		<td data-post="{{i.title}}" class="post">
         			{{i.title}}
         		</td>
-        		<td class="affiliation">
+        		<td data-affil="{{i.affiliation}}" class="affiliation">
         			{{i.affiliation}}
         		</td>
-                <td class="firstname nodisplay">
-                    {{i.firstname}}
-                </td>
+                <td class="firstname nodisplay"></td>
+                <td data-tags="{% for tag in i.tags %}{{tag + ' '}}{% endfor %}" class="tags nodisplay"></td>
         	</tr> 
         {% endfor %}  		
 
@@ -74,17 +77,40 @@
     </table>
     </div>
 </section>
-
+<script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
 <script src="http://listjs.com/no-cdn/list.js"></script>
 <script src="http://listjs.com/no-cdn/list.fuzzysearch.js"></script>
 <script type="text/javascript">
 
+    // Sortable list through list.js
+
     var options = {
-        valueNames: [ { attr: 'data-target', name: 'name'}, 'post', 'affiliation', 'firstname'],
+        valueNames: [ {attr: 'data-name', name: 'name'}, {attr: 'data-post', name: 'post'}, {attr: 'data-affil', name: 'affiliation'}, {attr: 'data-tags', name: 'tags'}, 'firstname' ],
         plugins: [ ListFuzzySearch() ] 
     };
 
     var contactList = new List('experts-sortable', options);
+
+    // Tags functionality through list.js
+
+    $(".filter").on("click", function(){
+
+        var tagName = ($(this).attr("id"))
+
+        contactList.filter(function(item) {
+           if (item.values().tags.includes(tagName)){
+               return true;
+           } else {
+               return false;
+           }
+        });
+
+    });
+
+    $("#display-all").on("click", function(){
+        contactList.filter();
+    });
+
 
 </script>
 

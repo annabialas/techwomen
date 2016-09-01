@@ -7,7 +7,7 @@
       "title": "U.S. Policy Manager",
       "affiliation": "Access Now",
       "contact": "https://www.accessnow.org/author/amie-stepanovich/",
-      "tags": ["policy", "data", "global"]
+      "tags": ["policy", "national"]
     },
     {
       "name": "Eva Galperin",
@@ -16,7 +16,7 @@
       "title": "Global Policy Analyst",
       "affiliation": "Electronic Frontier Foundation",
       "contact": "https://www.eff.org/about/staff/eva-galperin",
-      "tags": ["policy", "data", "global"]
+      "tags": ["policy", "global"]
     },
     {
       "name": "Jennifer Granick",
@@ -25,7 +25,7 @@
       "title": "Director of Civil Liberties",
       "affiliation": "The Center for Internet and Society at Stanford Law School",
       "contact": "http://cyberlaw.stanford.edu/about/people/jennifer-granick",
-      "tags": ["policy", "data", "global"]
+      "tags": ["policy", "governance"]
 
     },
     {
@@ -35,7 +35,7 @@
       "title": "Cryptography Fellow",
       "affiliation": "The Center for Internet and Society at Stanford Law School",
       "contact": "http://cyberlaw.stanford.edu/about/people/riana-pfefferkorn",
-      "tags": ["policy", "data", "global"]
+      "tags": ["policy", "security", "data"]
     },
     {
       "name": "Susan Hennessey",
@@ -44,7 +44,7 @@
       "title": "Fellow in National Security in Governance Studies",
       "affiliation": "The Brookings Institution",
       "contact": "https://www.brookings.edu/experts/susan-hennessey/",
-      "tags": ["policy", "data", "global"]
+      "tags": ["policy", "governance", "security"]
     },
     {
       "name": "Katie Moussouris",
@@ -53,7 +53,7 @@
       "title": "Cybersecurity Fellow",
       "affiliation": "New America Foundation",
       "contact": "https://www.newamerica.org/our-people/katie-moussouris/",
-      "tags": ["policy", "data", "global"]
+      "tags": ["policy", "security", "national"]
     },
     {
       "name": "Wafa Ben Hassine",
@@ -62,7 +62,7 @@
       "title": "Information Controls Fellow",
       "affiliation": "Open Technology Fund",
       "contact": "https://www.opentech.fund/fellow/wafa-ben-hassine",
-      "tags": ["policy", "data", "global"]
+      "tags": ["security", "data"]
     }
   ]
 }

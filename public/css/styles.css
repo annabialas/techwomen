@@ -7630,6 +7630,13 @@ table {
 .b-modal {
   z-index: 30; }
 
+.m-yellow {
+  color: white; }
+
+.m-yellow:hover {
+  color: white;
+  background-color: #ddc136; }
+
 .b-modal .e-content {
   text-align: left; }
   .b-modal .e-content h4 {
@@ -7652,6 +7659,12 @@ table {
         background-color: #523080; }
       .b-modal .e-content #tags .label--global {
         background-color: #ee5b43; }
+      .b-modal .e-content #tags .label--national {
+        background-color: #008895; }
+      .b-modal .e-content #tags .label--security {
+        background-color: #333; }
+      .b-modal .e-content #tags .label--governance {
+        background-color: #e3cc59; }
   .b-modal .e-content i {
     margin-left: 5px;
     vertical-align: top;

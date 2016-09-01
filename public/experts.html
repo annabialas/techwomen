@@ -71,16 +71,19 @@
         <input class="fuzzy-search" type="text">
         <input class="material-icons" type="submit" value="search">
     </form>
-    <div class="">
-        <a href="#" class="b-button m-blue">Policy</a>
-        <a href="#" class="b-button m-purple">Data</a>
-        <a href="#" class="b-button m-orange">Global</a>
-    </div>
+        <div class="b-button m-gray" id="display-all">Display All</div>
+        <div class="b-button m-blue filter" id="policy">Policy</div>
+        <div class="b-button m-purple filter" id="data">Data</div>
+        <div class="b-button m-orange filter" id="global">Global</div>
+        <div class="b-button m-teal filter" id="national">National</div>
+        <div class="b-button m-black filter" id="security">Security</div>
+        <div class="b-button m-yellow filter" id="governance">Governance</div>
 	<table>
 		<colgroup>
 	        <col style="width:25%"/>
 	        <col style="width:35%"/>
 	       	<col style="width:40%"/>
+            <col style="width:0%"/>
             <col style="width:0%"/>
 
     	</colgroup>
@@ -90,12 +93,13 @@
             	<th scope="col"><span class="sort" data-sort="post">Title <i class="material-icons">keyboard_arrow_down</i></span></th>
             	<th scope="col"><span class="sort" data-sort="affiliation">Affiliation <i class="material-icons">keyboard_arrow_down</i></span></th>
                 <th scope="col" class="sort nodisplay" data-sort="firstname"></th>
+                <th scope="col" class="sort nodisplay" data-sort="tags"></th>
         	</tr>
         </thead>
         <tbody class="list">
         
         	<tr>
-        		<td data-target="Ben Hassine" class="name">
+        		<td data-name="Ben Hassine" class="name">
                     <a class="expert-modal" href="#">Wafa Ben Hassine</a>
                                     
      <div class="b-modal">
@@ -105,11 +109,9 @@
             <h5> Open Technology Fund</h5>
             <p id="tags">
                 
-                    <a href=""><span class="label label--policy">policy</span></a>
+                    <span class="label label--security">security</span>
                 
-                    <a href=""><span class="label label--data">data</span></a>
-                
-                    <a href=""><span class="label label--global">global</span></a>
+                    <span class="label label--data">data</span>
                 
             </p>
             <h5><a href="https://www.opentech.fund/fellow/wafa-ben-hassine" target="_black">Link to Bio<i class="material-icons">launch</i></h5>
@@ -119,19 +121,18 @@
     </div>
  
         		</td>
-        		<td class="post">
+        		<td data-post="Information Controls Fellow" class="post">
         			Information Controls Fellow
         		</td>
-        		<td class="affiliation">
+        		<td data-affil="Open Technology Fund" class="affiliation">
         			Open Technology Fund
         		</td>
-                <td class="firstname nodisplay">
-                    Wafa
-                </td>
+                <td class="firstname nodisplay"></td>
+                <td data-tags="security data " class="tags nodisplay"></td>
         	</tr> 
         
         	<tr>
-        		<td data-target="Galperin" class="name">
+        		<td data-name="Galperin" class="name">
                     <a class="expert-modal" href="#">Eva Galperin</a>
                                     
      <div class="b-modal">
@@ -141,11 +142,9 @@
             <h5> Electronic Frontier Foundation</h5>
             <p id="tags">
                 
-                    <a href=""><span class="label label--policy">policy</span></a>
+                    <span class="label label--policy">policy</span>
                 
-                    <a href=""><span class="label label--data">data</span></a>
-                
-                    <a href=""><span class="label label--global">global</span></a>
+                    <span class="label label--global">global</span>
                 
             </p>
             <h5><a href="https://www.eff.org/about/staff/eva-galperin" target="_black">Link to Bio<i class="material-icons">launch</i></h5>
@@ -155,19 +154,18 @@
     </div>
  
         		</td>
-        		<td class="post">
+        		<td data-post="Global Policy Analyst" class="post">
         			Global Policy Analyst
         		</td>
-        		<td class="affiliation">
+        		<td data-affil="Electronic Frontier Foundation" class="affiliation">
         			Electronic Frontier Foundation
         		</td>
-                <td class="firstname nodisplay">
-                    Eva
-                </td>
+                <td class="firstname nodisplay"></td>
+                <td data-tags="policy global " class="tags nodisplay"></td>
         	</tr> 
         
         	<tr>
-        		<td data-target="Granick" class="name">
+        		<td data-name="Granick" class="name">
                     <a class="expert-modal" href="#">Jennifer Granick</a>
                                     
      <div class="b-modal">
@@ -177,11 +175,9 @@
             <h5> The Center for Internet and Society at Stanford Law School</h5>
             <p id="tags">
                 
-                    <a href=""><span class="label label--policy">policy</span></a>
+                    <span class="label label--policy">policy</span>
                 
-                    <a href=""><span class="label label--data">data</span></a>
-                
-                    <a href=""><span class="label label--global">global</span></a>
+                    <span class="label label--governance">governance</span>
                 
             </p>
             <h5><a href="http://cyberlaw.stanford.edu/about/people/jennifer-granick" target="_black">Link to Bio<i class="material-icons">launch</i></h5>
@@ -191,19 +187,18 @@
     </div>
  
         		</td>
-        		<td class="post">
+        		<td data-post="Director of Civil Liberties" class="post">
         			Director of Civil Liberties
         		</td>
-        		<td class="affiliation">
+        		<td data-affil="The Center for Internet and Society at Stanford Law School" class="affiliation">
         			The Center for Internet and Society at Stanford Law School
         		</td>
-                <td class="firstname nodisplay">
-                    Jennifer
-                </td>
+                <td class="firstname nodisplay"></td>
+                <td data-tags="policy governance " class="tags nodisplay"></td>
         	</tr> 
         
         	<tr>
-        		<td data-target="Hennessey" class="name">
+        		<td data-name="Hennessey" class="name">
                     <a class="expert-modal" href="#">Susan Hennessey</a>
                                     
      <div class="b-modal">
@@ -213,11 +208,11 @@
             <h5> The Brookings Institution</h5>
             <p id="tags">
                 
-                    <a href=""><span class="label label--policy">policy</span></a>
+                    <span class="label label--policy">policy</span>
                 
-                    <a href=""><span class="label label--data">data</span></a>
+                    <span class="label label--governance">governance</span>
                 
-                    <a href=""><span class="label label--global">global</span></a>
+                    <span class="label label--security">security</span>
                 
             </p>
             <h5><a href="https://www.brookings.edu/experts/susan-hennessey/" target="_black">Link to Bio<i class="material-icons">launch</i></h5>
@@ -227,19 +222,18 @@
     </div>
  
         		</td>
-        		<td class="post">
+        		<td data-post="Fellow in National Security in Governance Studies" class="post">
         			Fellow in National Security in Governance Studies
         		</td>
-        		<td class="affiliation">
+        		<td data-affil="The Brookings Institution" class="affiliation">
         			The Brookings Institution
         		</td>
-                <td class="firstname nodisplay">
-                    Susan
-                </td>
+                <td class="firstname nodisplay"></td>
+                <td data-tags="policy governance security " class="tags nodisplay"></td>
         	</tr> 
         
         	<tr>
-        		<td data-target="Moussoris" class="name">
+        		<td data-name="Moussoris" class="name">
                     <a class="expert-modal" href="#">Katie Moussouris</a>
                                     
      <div class="b-modal">
@@ -249,11 +243,11 @@
             <h5> New America Foundation</h5>
             <p id="tags">
                 
-                    <a href=""><span class="label label--policy">policy</span></a>
+                    <span class="label label--policy">policy</span>
                 
-                    <a href=""><span class="label label--data">data</span></a>
+                    <span class="label label--security">security</span>
                 
-                    <a href=""><span class="label label--global">global</span></a>
+                    <span class="label label--national">national</span>
                 
             </p>
             <h5><a href="https://www.newamerica.org/our-people/katie-moussouris/" target="_black">Link to Bio<i class="material-icons">launch</i></h5>
@@ -263,19 +257,18 @@
     </div>
  
         		</td>
-        		<td class="post">
+        		<td data-post="Cybersecurity Fellow" class="post">
         			Cybersecurity Fellow
         		</td>
-        		<td class="affiliation">
+        		<td data-affil="New America Foundation" class="affiliation">
         			New America Foundation
         		</td>
-                <td class="firstname nodisplay">
-                    Katie
-                </td>
+                <td class="firstname nodisplay"></td>
+                <td data-tags="policy security national " class="tags nodisplay"></td>
         	</tr> 
         
         	<tr>
-        		<td data-target="Pfefferkorn" class="name">
+        		<td data-name="Pfefferkorn" class="name">
                     <a class="expert-modal" href="#">Riana Pfefferkorn</a>
                                     
      <div class="b-modal">
@@ -285,11 +278,11 @@
             <h5> The Center for Internet and Society at Stanford Law School</h5>
             <p id="tags">
                 
-                    <a href=""><span class="label label--policy">policy</span></a>
+                    <span class="label label--policy">policy</span>
                 
-                    <a href=""><span class="label label--data">data</span></a>
+                    <span class="label label--security">security</span>
                 
-                    <a href=""><span class="label label--global">global</span></a>
+                    <span class="label label--data">data</span>
                 
             </p>
             <h5><a href="http://cyberlaw.stanford.edu/about/people/riana-pfefferkorn" target="_black">Link to Bio<i class="material-icons">launch</i></h5>
@@ -299,19 +292,18 @@
     </div>
  
         		</td>
-        		<td class="post">
+        		<td data-post="Cryptography Fellow" class="post">
         			Cryptography Fellow
         		</td>
-        		<td class="affiliation">
+        		<td data-affil="The Center for Internet and Society at Stanford Law School" class="affiliation">
         			The Center for Internet and Society at Stanford Law School
         		</td>
-                <td class="firstname nodisplay">
-                    Riana
-                </td>
+                <td class="firstname nodisplay"></td>
+                <td data-tags="policy security data " class="tags nodisplay"></td>
         	</tr> 
         
         	<tr>
-        		<td data-target="Stepanovich" class="name">
+        		<td data-name="Stepanovich" class="name">
                     <a class="expert-modal" href="#">Amie Stepanovich</a>
                                     
      <div class="b-modal">
@@ -321,11 +313,9 @@
             <h5> Access Now</h5>
             <p id="tags">
                 
-                    <a href=""><span class="label label--policy">policy</span></a>
+                    <span class="label label--policy">policy</span>
                 
-                    <a href=""><span class="label label--data">data</span></a>
-                
-                    <a href=""><span class="label label--global">global</span></a>
+                    <span class="label label--national">national</span>
                 
             </p>
             <h5><a href="https://www.accessnow.org/author/amie-stepanovich/" target="_black">Link to Bio<i class="material-icons">launch</i></h5>
@@ -335,15 +325,14 @@
     </div>
  
         		</td>
-        		<td class="post">
+        		<td data-post="U.S. Policy Manager" class="post">
         			U.S. Policy Manager
         		</td>
-        		<td class="affiliation">
+        		<td data-affil="Access Now" class="affiliation">
         			Access Now
         		</td>
-                <td class="firstname nodisplay">
-                    Amie
-                </td>
+                <td class="firstname nodisplay"></td>
+                <td data-tags="policy national " class="tags nodisplay"></td>
         	</tr> 
           		
 
@@ -352,17 +341,40 @@
     </table>
     </div>
 </section>
-
+<script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>
 <script src="http://listjs.com/no-cdn/list.js"></script>
 <script src="http://listjs.com/no-cdn/list.fuzzysearch.js"></script>
 <script type="text/javascript">
 
+    // Sortable list through list.js
+
     var options = {
-        valueNames: [ { attr: 'data-target', name: 'name'}, 'post', 'affiliation', 'firstname'],
+        valueNames: [ {attr: 'data-name', name: 'name'}, {attr: 'data-post', name: 'post'}, {attr: 'data-affil', name: 'affiliation'}, {attr: 'data-tags', name: 'tags'}, 'firstname' ],
         plugins: [ ListFuzzySearch() ] 
     };
 
     var contactList = new List('experts-sortable', options);
+
+    // Tags functionality through list.js
+
+    $(".filter").on("click", function(){
+
+        var tagName = ($(this).attr("id"))
+
+        contactList.filter(function(item) {
+           if (item.values().tags.includes(tagName)){
+               return true;
+           } else {
+               return false;
+           }
+        });
+
+    });
+
+    $("#display-all").on("click", function(){
+        contactList.filter();
+    });
+
 
 </script>
 
