@@ -4,11 +4,9 @@
             <h4>{{name}}</h4>
             <h5>{{title}}</h5>
             <h5> {{affiliation}}</h5>
-            <p id="tags">
-                {% for tag in tags %}
-                    <span class="label label--{% if tag == 'policy' %}policy{% elif tag == 'data' %}data{% elif tag == 'national' %}national{% elif tag == 'governance' %}governance{% elif tag == 'security' %}security{% else %}global{% endif %}">{{tag}}</span>
-                {% endfor %}
-            </p>
+            {% for tag in tags %}
+            <div class="b-button filter label label--{% if tag == 'policy' %}policy{% elif tag == 'data' %}data{% elif tag == 'national' %}national{% elif tag == 'governance' %}governance{% elif tag == 'security' %}security{% else %}global{% endif %}" id="{% if tag == 'policy' %}policy{% elif tag == 'data' %}data{% elif tag == 'national' %}national{% elif tag == 'governance' %}governance{% elif tag == 'security' %}security{% else %}global{% endif %}">{{tag}}</div>
+            {% endfor %}
             <h5><a href="{{contact}}" target="_black">Link to Bio<i class="material-icons">launch</i></h5>
             <br>
             <a class="b-button expert-close-modal" href="#">Close</a>
@@ -95,7 +93,8 @@
 
     $(".filter").on("click", function(){
 
-        var tagName = ($(this).attr("id"))
+        var tagName = ($(this).attr("id"));
+        var $overlay = $('#overlay');
 
         contactList.filter(function(item) {
            if (item.values().tags.includes(tagName)){
@@ -104,6 +103,9 @@
                return false;
            }
         });
+
+        $(".b-modal").removeClass("m-active");
+        $overlay.removeClass('m-active');
 
     });
 

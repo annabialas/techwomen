@@ -7644,27 +7644,24 @@ table {
     margin-bottom: 16px; }
   .b-modal .e-content .expert-close-modal {
     font-size: 16px; }
-  .b-modal .e-content #tags {
-    margin: 1em 0; }
-    .b-modal .e-content #tags .label {
-      margin-right: 5px;
-      padding: 5px 10px;
-      color: white;
-      font-size: 90%;
-      border-radius: .25em;
-      text-transform: capitalize; }
-      .b-modal .e-content #tags .label--policy {
-        background-color: #008ab3; }
-      .b-modal .e-content #tags .label--data {
-        background-color: #523080; }
-      .b-modal .e-content #tags .label--global {
-        background-color: #ee5b43; }
-      .b-modal .e-content #tags .label--national {
-        background-color: #008895; }
-      .b-modal .e-content #tags .label--security {
-        background-color: #333; }
-      .b-modal .e-content #tags .label--governance {
-        background-color: #e3cc59; }
+  .b-modal .e-content .label {
+    margin-right: 5px;
+    padding: 5px 10px;
+    color: white;
+    font-size: 90%;
+    text-transform: capitalize; }
+    .b-modal .e-content .label--policy {
+      background-color: #008ab3; }
+    .b-modal .e-content .label--data {
+      background-color: #523080; }
+    .b-modal .e-content .label--global {
+      background-color: #ee5b43; }
+    .b-modal .e-content .label--national {
+      background-color: #008895; }
+    .b-modal .e-content .label--security {
+      background-color: #333; }
+    .b-modal .e-content .label--governance {
+      background-color: #e3cc59; }
   .b-modal .e-content i {
     margin-left: 5px;
     vertical-align: top;

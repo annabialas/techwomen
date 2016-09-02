@@ -107,13 +107,11 @@
             <h4>Wafa Ben Hassine</h4>
             <h5>Information Controls Fellow</h5>
             <h5> Open Technology Fund</h5>
-            <p id="tags">
-                
-                    <span class="label label--security">security</span>
-                
-                    <span class="label label--data">data</span>
-                
-            </p>
+            
+            <div class="b-button filter label label--security" id="security">security</div>
+            
+            <div class="b-button filter label label--data" id="data">data</div>
+            
             <h5><a href="https://www.opentech.fund/fellow/wafa-ben-hassine" target="_black">Link to Bio<i class="material-icons">launch</i></h5>
             <br>
             <a class="b-button expert-close-modal" href="#">Close</a>
@@ -140,13 +138,11 @@
             <h4>Eva Galperin</h4>
             <h5>Global Policy Analyst</h5>
             <h5> Electronic Frontier Foundation</h5>
-            <p id="tags">
-                
-                    <span class="label label--policy">policy</span>
-                
-                    <span class="label label--global">global</span>
-                
-            </p>
+            
+            <div class="b-button filter label label--policy" id="policy">policy</div>
+            
+            <div class="b-button filter label label--global" id="global">global</div>
+            
             <h5><a href="https://www.eff.org/about/staff/eva-galperin" target="_black">Link to Bio<i class="material-icons">launch</i></h5>
             <br>
             <a class="b-button expert-close-modal" href="#">Close</a>
@@ -173,13 +169,11 @@
             <h4>Jennifer Granick</h4>
             <h5>Director of Civil Liberties</h5>
             <h5> The Center for Internet and Society at Stanford Law School</h5>
-            <p id="tags">
-                
-                    <span class="label label--policy">policy</span>
-                
-                    <span class="label label--governance">governance</span>
-                
-            </p>
+            
+            <div class="b-button filter label label--policy" id="policy">policy</div>
+            
+            <div class="b-button filter label label--governance" id="governance">governance</div>
+            
             <h5><a href="http://cyberlaw.stanford.edu/about/people/jennifer-granick" target="_black">Link to Bio<i class="material-icons">launch</i></h5>
             <br>
             <a class="b-button expert-close-modal" href="#">Close</a>
@@ -206,15 +200,13 @@
             <h4>Susan Hennessey</h4>
             <h5>Fellow in National Security in Governance Studies</h5>
             <h5> The Brookings Institution</h5>
-            <p id="tags">
-                
-                    <span class="label label--policy">policy</span>
-                
-                    <span class="label label--governance">governance</span>
-                
-                    <span class="label label--security">security</span>
-                
-            </p>
+            
+            <div class="b-button filter label label--policy" id="policy">policy</div>
+            
+            <div class="b-button filter label label--governance" id="governance">governance</div>
+            
+            <div class="b-button filter label label--security" id="security">security</div>
+            
             <h5><a href="https://www.brookings.edu/experts/susan-hennessey/" target="_black">Link to Bio<i class="material-icons">launch</i></h5>
             <br>
             <a class="b-button expert-close-modal" href="#">Close</a>
@@ -241,15 +233,13 @@
             <h4>Katie Moussouris</h4>
             <h5>Cybersecurity Fellow</h5>
             <h5> New America Foundation</h5>
-            <p id="tags">
-                
-                    <span class="label label--policy">policy</span>
-                
-                    <span class="label label--security">security</span>
-                
-                    <span class="label label--national">national</span>
-                
-            </p>
+            
+            <div class="b-button filter label label--policy" id="policy">policy</div>
+            
+            <div class="b-button filter label label--security" id="security">security</div>
+            
+            <div class="b-button filter label label--national" id="national">national</div>
+            
             <h5><a href="https://www.newamerica.org/our-people/katie-moussouris/" target="_black">Link to Bio<i class="material-icons">launch</i></h5>
             <br>
             <a class="b-button expert-close-modal" href="#">Close</a>
@@ -276,15 +266,13 @@
             <h4>Riana Pfefferkorn</h4>
             <h5>Cryptography Fellow</h5>
             <h5> The Center for Internet and Society at Stanford Law School</h5>
-            <p id="tags">
-                
-                    <span class="label label--policy">policy</span>
-                
-                    <span class="label label--security">security</span>
-                
-                    <span class="label label--data">data</span>
-                
-            </p>
+            
+            <div class="b-button filter label label--policy" id="policy">policy</div>
+            
+            <div class="b-button filter label label--security" id="security">security</div>
+            
+            <div class="b-button filter label label--data" id="data">data</div>
+            
             <h5><a href="http://cyberlaw.stanford.edu/about/people/riana-pfefferkorn" target="_black">Link to Bio<i class="material-icons">launch</i></h5>
             <br>
             <a class="b-button expert-close-modal" href="#">Close</a>
@@ -311,13 +299,11 @@
             <h4>Amie Stepanovich</h4>
             <h5>U.S. Policy Manager</h5>
             <h5> Access Now</h5>
-            <p id="tags">
-                
-                    <span class="label label--policy">policy</span>
-                
-                    <span class="label label--national">national</span>
-                
-            </p>
+            
+            <div class="b-button filter label label--policy" id="policy">policy</div>
+            
+            <div class="b-button filter label label--national" id="national">national</div>
+            
             <h5><a href="https://www.accessnow.org/author/amie-stepanovich/" target="_black">Link to Bio<i class="material-icons">launch</i></h5>
             <br>
             <a class="b-button expert-close-modal" href="#">Close</a>
@@ -359,7 +345,8 @@
 
     $(".filter").on("click", function(){
 
-        var tagName = ($(this).attr("id"))
+        var tagName = ($(this).attr("id"));
+        var $overlay = $('#overlay');
 
         contactList.filter(function(item) {
            if (item.values().tags.includes(tagName)){
@@ -368,6 +355,9 @@
                return false;
            }
         });
+
+        $(".b-modal").removeClass("m-active");
+        $overlay.removeClass('m-active');
 
     });
 
