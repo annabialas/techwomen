@@ -65,7 +65,9 @@
         		<td data-affil="{{i.affiliation}}" class="affiliation">
         			{{i.affiliation}}
         		</td>
-                <td class="firstname nodisplay"></td>
+                <td class="firstname nodisplay">
+                    {{i.firstname}}
+                </td>
                 <td data-tags="{% for tag in i.tags %}{{tag + ' '}}{% endfor %}" class="tags nodisplay"></td>
         	</tr> 
         {% endfor %}  		
