@@ -46,7 +46,7 @@
     input[type='text'] {
         padding: 8px;
         max-width: 100%;
-        width: calc(100% - 45px); // Need to keep both widths in base and .m-active styles for transition to work smoothly
+        width: calc(100% - 45px) !important; // Need to keep both widths in base and .m-active styles for transition to work smoothly
     }
 
     input[type='submit'] { opacity: 1; }

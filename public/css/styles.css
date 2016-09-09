@@ -7348,9 +7348,6 @@ main {
   background-color: #243747;
   border: none; }
 
-.fa-twitter {
-  color: #47a6b3; }
-
 .question-text-area {
   color: white; }
 
@@ -7630,12 +7627,8 @@ table {
 .b-modal {
   z-index: 30; }
 
-.m-yellow {
-  color: white; }
-
-.m-yellow:hover {
-  color: white;
-  background-color: #ddc136; }
+.m-clicked {
+  background-color: #523080; }
 
 .b-modal .e-content {
   text-align: left; }
@@ -7646,23 +7639,16 @@ table {
     font-size: 16px; }
   .b-modal .e-content .label {
     margin-right: 5px;
+    margin-bottom: 0px;
     padding: 5px 10px;
     color: white;
     font-size: 90%;
     text-transform: capitalize; }
-    .b-modal .e-content .label--policy {
-      background-color: #008ab3; }
-    .b-modal .e-content .label--data {
-      background-color: #523080; }
-    .b-modal .e-content .label--global {
-      background-color: #ee5b43; }
-    .b-modal .e-content .label--national {
-      background-color: #008895; }
-    .b-modal .e-content .label--security {
-      background-color: #333; }
-    .b-modal .e-content .label--governance {
-      background-color: #e3cc59; }
   .b-modal .e-content i {
     margin-left: 5px;
     vertical-align: top;
     position: relative; }
+  .b-modal .e-content .e-social-media {
+    color: #333; }
+    .b-modal .e-content .e-social-media .e-social-media-item {
+      margin-right: 20px; }

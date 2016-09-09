@@ -25,8 +25,7 @@ table {
 
 .b-modal { z-index: 30; }
 
-.m-yellow { color: $white; }
-.m-yellow:hover {color: $white; background-color: darken($yellow, 8)}
+.m-clicked { background-color: $purple; }
 
 .b-modal .e-content {
 	text-align: left;
@@ -37,30 +36,12 @@ table {
 	.expert-close-modal { font-size: 16px; }
 
     	.label { 
-	    	margin-right: 5px; 
+	    	margin-right: 5px;
+	    	margin-bottom: 0px; 
 	    	padding: 5px 10px ; 
 	    	color: $white; 
 	    	font-size: 90%;
 	    	text-transform: capitalize;
-
-	    	&--policy{
-	    		background-color: $blue;
-	    	}
-	    	&--data{
-	    		background-color: $purple;
-	    	}
-	    	&--global{
-	    		background-color: $orange;
-	    	}
-	    	&--national{
-	    		background-color: $teal;
-	    	}
-	    	&--security{
-	    		background-color: $black;
-	    	}
-	    	&--governance{
-	    		background-color: $yellow;
-	    	}
     	}
 
 
@@ -68,6 +49,13 @@ table {
 		margin-left: 5px;
        	vertical-align: top;
         position: relative;
+    }
+
+    .e-social-media {
+
+    	color: $black ;
+
+    	.e-social-media-item { margin-right: 20px; }
     }
 
 }

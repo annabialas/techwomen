@@ -1,68 +1,32 @@
-{ "experts": [
-
+{"experts": 
+  [
     {
-      "name": "Amie Stepanovich",
-      "firstname": "Amie",
-      "lastname": "Stepanovich",
-      "title": "U.S. Policy Manager",
-      "affiliation": "Access Now",
-      "contact": "https://www.accessnow.org/author/amie-stepanovich/",
-      "tags": ["policy", "national"]
+      "First": "Susan",
+      "Last": "Hennessey",
+      "Title": "Fellow, Governance Studies",
+      "Affiliation": "Brookings Institution",
+      "Bio": "https://www.brookings.edu/experts/susan-hennessey/",
+      "Twitter": "https://twitter.com/Susan_Hennessey",
+      "Website": "",
+      "Medium": "",
+      "LinkedIn": "",
+      "GitHub": "",
+      "Tags": ["Cybersecurity", "Privacy", "Military", "National Security", "Legislation", "Government", "Law", "Policy"],
+      "Keywords": ["National Security", "Data Privacy", "National Security Agency", "intelligence"]
     },
     {
-      "name": "Eva Galperin",
-      "firstname": "Eva",
-      "lastname": "Galperin",
-      "title": "Global Policy Analyst",
-      "affiliation": "Electronic Frontier Foundation",
-      "contact": "https://www.eff.org/about/staff/eva-galperin",
-      "tags": ["policy", "global"]
-    },
-    {
-      "name": "Jennifer Granick",
-      "firstname": "Jennifer",
-      "lastname": "Granick",
-      "title": "Director of Civil Liberties",
-      "affiliation": "The Center for Internet and Society at Stanford Law School",
-      "contact": "http://cyberlaw.stanford.edu/about/people/jennifer-granick",
-      "tags": ["policy", "governance"]
-
-    },
-    {
-      "name": "Riana Pfefferkorn",
-      "firstname": "Riana",
-      "lastname": "Pfefferkorn",
-      "title": "Cryptography Fellow",
-      "affiliation": "The Center for Internet and Society at Stanford Law School",
-      "contact": "http://cyberlaw.stanford.edu/about/people/riana-pfefferkorn",
-      "tags": ["policy", "security", "data"]
-    },
-    {
-      "name": "Susan Hennessey",
-      "firstname": "Susan",
-      "lastname": "Hennessey",
-      "title": "Fellow in National Security in Governance Studies",
-      "affiliation": "The Brookings Institution",
-      "contact": "https://www.brookings.edu/experts/susan-hennessey/",
-      "tags": ["policy", "governance", "security"]
-    },
-    {
-      "name": "Katie Moussouris",
-      "firstname": "Katie",
-      "lastname": "Moussoris",
-      "title": "Cybersecurity Fellow",
-      "affiliation": "New America Foundation",
-      "contact": "https://www.newamerica.org/our-people/katie-moussouris/",
-      "tags": ["policy", "security", "national"]
-    },
-    {
-      "name": "Wafa Ben Hassine",
-      "firstname": "Wafa",
-      "lastname": "Ben Hassine",
-      "title": "Information Controls Fellow",
-      "affiliation": "Open Technology Fund",
-      "contact": "https://www.opentech.fund/fellow/wafa-ben-hassine",
-      "tags": ["security", "data"]
+      "First": "Amie",
+      "Last": "Stepanovich",
+      "Title": "U.S. Policy Manager; Global Policy Counsel",
+      "Affiliation": "Access Now",
+      "Bio": "https://www.accessnow.org/author/amie-stepanovich/",
+      "Twitter": "https://twitter.com/astepanovich",
+      "Website": "",
+      "Medium": "https://medium.com/@astepanovich",
+      "LinkedIn": "https://www.linkedin.com/in/astepanovich",
+      "GitHub": "",
+      "Tags": ["Cybersecurity", "Privacy", "National Security", "Cryptopgraphy", "Legislation", "Free Speech", "Law", "Policy"],
+      "Keywords": ""
     }
   ]
 }

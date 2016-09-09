@@ -1,13 +1,39 @@
-{% macro modal(name,title,affiliation,contact,tags) %}                
+{% macro modal(first,last,title,affiliation,tags,keywords,bio,website,twitter,medium,linkedin,github) %}                
      <div class="b-modal">
         <div class="e-content">
-            <h4>{{name}}</h4>
+            <h4>{{first}} {{last}}</h4>
             <h5>{{title}}</h5>
-            <h5> {{affiliation}}</h5>
+            <h5>{{affiliation}}</h5>
+            <h5>Tags:</h5>
             {% for tag in tags %}
-            <div class="b-button filter label label--{% if tag == 'policy' %}policy{% elif tag == 'data' %}data{% elif tag == 'national' %}national{% elif tag == 'governance' %}governance{% elif tag == 'security' %}security{% else %}global{% endif %}" id="{% if tag == 'policy' %}policy{% elif tag == 'data' %}data{% elif tag == 'national' %}national{% elif tag == 'governance' %}governance{% elif tag == 'security' %}security{% else %}global{% endif %}">{{tag}}</div>
+            <div class="b-button filter label label--{% if tag == 'Education' %}education{% elif tag == 'Research' %}research{% elif tag == 'Litigation' %}litigation{% elif tag == 'Policy' %}policy{% elif tag == 'Law' %}law{% elif tag == 'Journalism' %}journalism{% elif tag == 'Mathematics' %}mathematics{% elif tag == 'Free Speech' %}speech{% elif tag == 'Government' %}government{% elif tag == 'Legislation' %}legislation{% elif tag == 'Cryptography' %}cryptography{% elif tag == 'National Security' %}security{% elif tag == 'Military' %}military{% elif tag == 'Computer Science' %}computer{% else %}privacy{% endif %}" id="{% if tag == 'Education' %}Education{% elif tag == 'Research' %}Research{% elif tag == 'Litigation' %}Litigation{% elif tag == 'Policy' %}Policy{% elif tag == 'Law' %}Law{% elif tag == 'Journalism' %}Journalism{% elif tag == 'Mathematics' %}Mathematics{% elif tag == 'Free Speech' %}Speech{% elif tag == 'Government' %}Government{% elif tag == 'Legislation' %}Legislation{% elif tag == 'Cryptography' %}Cryptography{% elif tag == 'National Security' %}Security{% elif tag == 'Military' %}Military{% elif tag == 'Computer Science' %}Computer{% else %}Privacy{% endif %}">{{tag}}</div>
             {% endfor %}
-            <h5><a href="{{contact}}" target="_black">Link to Bio<i class="material-icons">launch</i></h5>
+            {% if keywords %}
+            <h5>Keywords:</h5>
+            {% for keyword in keywords %}
+            <div class="b-button label">{{keyword}}</div>
+            {% endfor %}
+            {% endif %}
+            {% if bio %}
+            <h5><a href="{{bio}}" target="_black">Link to Bio<i class="material-icons">launch</i></a></h5>
+            {% endif %}
+            {% if website %}
+            <h5><a href="{{website}}" target="_black">Link to Personal Website<i class="material-icons">launch</i></a></h5>
+            {% endif %}
+            <div class="e-social-media">
+                {% if twitter %}
+                <a href="{{twitter}}"><i class="e-social-media-item fa fa-twitter" aria-hidden="true"></i></a>
+                {% endif %}
+                {% if medium %}
+                <a href="{{medium}}"><i class="e-social-media-item fa fa-medium" aria-hidden="true"></i></a>
+                {% endif %}
+                {% if linkedin %}
+                <a href="{{linkedin}}"><i class="e-social-media-item fa fa-linkedin" aria-hidden="true"></i></a>
+                {% endif %}
+                {% if github %}
+                <a href="{{github}}"><i class="e-social-media-item fa fa-github" aria-hidden="true"></i></a>
+                {% endif %}
+            </div>
             <br>
             <a class="b-button expert-close-modal" href="#">Close</a>
         </div>
@@ -27,13 +53,22 @@
         <input class="fuzzy-search" type="text">
         <input class="material-icons" type="submit" value="search">
     </form>
-        <div class="b-button m-gray" id="display-all">Display All</div>
-        <div class="b-button m-blue filter" id="policy">Policy</div>
-        <div class="b-button m-purple filter" id="data">Data</div>
-        <div class="b-button m-orange filter" id="global">Global</div>
-        <div class="b-button m-teal filter" id="national">National</div>
-        <div class="b-button m-black filter" id="security">Security</div>
-        <div class="b-button m-yellow filter" id="governance">Governance</div>
+        <div class="b-button label m-black" id="display-all">Display All</div>
+        <div class="b-button label m-gray filter" id="Rducation">Education</div>
+        <div class="b-button label m-gray filter" id="Research">Research</div>
+        <div class="b-button label m-gray filter" id="Litigation">Litigation</div>
+        <div class="b-button label m-gray filter" id="Policy">Policy</div>
+        <div class="b-button label m-gray filter" id="Law">Law</div>
+        <div class="b-button label m-gray filter" id="Journalism">Journalism</div>
+        <div class="b-button label m-gray filter" id="Mathematics">Mathematics</div>
+        <div class="b-button label m-gray filter" id="Speech">Free Speech</div>
+        <div class="b-button label m-gray filter" id="Security">National Security</div>
+        <div class="b-button label m-gray filter" id="Privacy">Privacy</div>
+        <div class="b-button label m-gray filter" id="Government">Government</div>
+        <div class="b-button label m-gray filter" id="Legislation">Legislation</div>
+        <div class="b-button label m-gray filter" id="Litigation">Cryptography</div>
+        <div class="b-button label m-gray filter" id="Military">Military</div>
+        <div class="b-button label m-gray filter" id="Computer">Computer Science</div>
 	<table>
 		<colgroup>
 	        <col style="width:25%"/>
@@ -55,20 +90,20 @@
         <tbody class="list">
         {% for i in experts|sort(attribute='lastname')  %}
         	<tr>
-        		<td data-name="{{i.lastname}}" class="name">
-                    <a class="expert-modal" href="#">{{i.name}}</a>
-                    {{modal(i.name,i.title,i.affiliation,i.contact,i.tags)}}
+        		<td data-name="{{i.Last}}" class="name">
+                    <a class="expert-modal" href="#">{{i.First}} {{i.Last}}</a>
+                    {{modal(i.First,i.Last,i.Title,i.Affiliation,i.Tags,i.Keywords,i.Bio,i.Website,i.Twitter,i.Medium,i.LinkedIn,i.Github)}}
         		</td>
-        		<td data-post="{{i.title}}" class="post">
-        			{{i.title}}
+        		<td data-post="{{i.Title}}" class="post">
+        			{{i.Title}}
         		</td>
-        		<td data-affil="{{i.affiliation}}" class="affiliation">
-        			{{i.affiliation}}
+        		<td data-affil="{{i.Affiliation}}" class="affiliation">
+        			{{i.Affiliation}}
         		</td>
                 <td class="firstname nodisplay">
                     {{i.firstname}}
                 </td>
-                <td data-tags="{% for tag in i.tags %}{{tag + ' '}}{% endfor %}" class="tags nodisplay"></td>
+                <td data-tags="{% for Tag in i.Tags %}{{Tag + ' '}}{% endfor %}" class="tags nodisplay"></td>
         	</tr> 
         {% endfor %}  		
 
@@ -106,12 +141,17 @@
            }
         });
 
+        $(".filter").removeClass("m-clicked");
+        $(this).addClass("m-clicked");
+
         $(".b-modal").removeClass("m-active");
         $overlay.removeClass('m-active');
+
 
     });
 
     $("#display-all").on("click", function(){
+        $(".filter").removeClass("m-clicked");
         contactList.filter();
     });
 
