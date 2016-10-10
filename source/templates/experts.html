@@ -100,10 +100,10 @@
         		<td data-affil="{{i.Affiliation}}" class="affiliation">
         			{{i.Affiliation}}
         		</td>
-                <td class="firstname nodisplay">
-                    {{i.firstname}}
+                <td data-first="{{i.First}}" class="first nodisplay">
+                    {{i.First}}
                 </td>
-                <td data-tags="{% for Tag in i.Tags %}{{Tag + ' '}}{% endfor %}" class="tags nodisplay"></td>
+                <!-- <td data-tags="{% for Tag in i.Tags %}{{Tag + ' '}}{% endfor %}" class="tags nodisplay"></td> -->
         	</tr> 
         {% endfor %}  		
 
@@ -120,7 +120,7 @@
     // Sortable list through list.js
 
     var options = {
-        valueNames: [ {attr: 'data-name', name: 'name'}, {attr: 'data-post', name: 'post'}, {attr: 'data-affil', name: 'affiliation'}, {attr: 'data-tags', name: 'tags'}, 'firstname' ],
+        valueNames: [ {attr: 'data-name', name: 'name'}, {attr: 'data-post', name: 'post'}, {attr: 'data-affil', name: 'affiliation'}, {attr: 'data-tags', name: 'tags'}, {attr: 'data-first', name: 'first'} ],
         plugins: [ ListFuzzySearch() ] 
     };
 

@@ -170,10 +170,10 @@
         		<td data-affil="Brookings Institution" class="affiliation">
         			Brookings Institution
         		</td>
-                <td class="firstname nodisplay">
-                    
+                <td data-first="Susan" class="first nodisplay">
+                    Susan
                 </td>
-                <td data-tags="Cybersecurity Privacy Military National Security Legislation Government Law Policy " class="tags nodisplay"></td>
+                <!-- <td data-tags="Cybersecurity Privacy Military National Security Legislation Government Law Policy " class="tags nodisplay"></td> -->
         	</tr> 
         
         	<tr>
@@ -232,10 +232,10 @@
         		<td data-affil="Access Now" class="affiliation">
         			Access Now
         		</td>
-                <td class="firstname nodisplay">
-                    
+                <td data-first="Amie" class="first nodisplay">
+                    Amie
                 </td>
-                <td data-tags="Cybersecurity Privacy National Security Cryptopgraphy Legislation Free Speech Law Policy " class="tags nodisplay"></td>
+                <!-- <td data-tags="Cybersecurity Privacy National Security Cryptopgraphy Legislation Free Speech Law Policy " class="tags nodisplay"></td> -->
         	</tr> 
           		
 
@@ -252,7 +252,7 @@
     // Sortable list through list.js
 
     var options = {
-        valueNames: [ {attr: 'data-name', name: 'name'}, {attr: 'data-post', name: 'post'}, {attr: 'data-affil', name: 'affiliation'}, {attr: 'data-tags', name: 'tags'}, 'firstname' ],
+        valueNames: [ {attr: 'data-name', name: 'name'}, {attr: 'data-post', name: 'post'}, {attr: 'data-affil', name: 'affiliation'}, {attr: 'data-tags', name: 'tags'}, {attr: 'data-first', name: 'first'} ],
         plugins: [ ListFuzzySearch() ] 
     };
 
